@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9135089218664242951}
   - component: {fileID: 9135089218664242950}
   - component: {fileID: 9135089218664242954}
+  - component: {fileID: 4189778866657526158}
+  - component: {fileID: 5232427791500155921}
   - component: {fileID: 3137196016017160774}
   m_Layer: 0
   m_Name: PlayerShip
@@ -63,8 +65,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0327f905865e58a42b3681d1c1859cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  bullet: {fileID: 6035153628728048164, guid: ea8a17b12e19fb04a86ed179991f1edf, type: 3}
+--- !u!114 &4189778866657526158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135089218664242952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e0e6c1f5d6acd42b9aae8458b48d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  boostSpeed: 20
+--- !u!114 &5232427791500155921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135089218664242952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ced204a32c91364881686f9e7e43dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aim1Prefab: {fileID: 6035153628728048164, guid: ea8a17b12e19fb04a86ed179991f1edf,
+    type: 3}
+  aim2Prefab: {fileID: 0}
+  scope1Distance: 20
+  scope2Distance: 0
 --- !u!135 &3137196016017160774
 SphereCollider:
   m_ObjectHideFlags: 0

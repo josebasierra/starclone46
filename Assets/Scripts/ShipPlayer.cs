@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class ShipPlayer : MonoBehaviour
 {
-    public float speed = 2f;
-    public GameObject bullet;
-    Rigidbody myRb;
+    ShipMovement moveComponent;
+    VisualAim aimComponent;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        myRb = this.GetComponent<Rigidbody>();
+        moveComponent = this.GetComponent<ShipMovement>();
+        aimComponent = this.GetComponent<VisualAim>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        Vector2 dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector3 objective = aimComponent.GetAimPosition();
 
- 
-        Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        myRb.velocity += Time.deltaTime * speed * dir;
-           
-
-        if (dir == Vector3.zero) myRb.velocity = Vector3.zero;
-
-        //if input disparar:
-        //Instantiate(bullet);
-    
+        if(moveComponent != null) moveComponent.Execute(dir, objective, false);
     }
 
 
