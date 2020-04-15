@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VisualAim : MonoBehaviour
+public class ScreenAimComponent : MonoBehaviour
 {
     public GameObject scope1Prefab;
     public GameObject scope2Prefab;

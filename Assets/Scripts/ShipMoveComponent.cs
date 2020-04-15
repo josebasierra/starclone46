@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovement : MonoBehaviour
+public class ShipMoveComponent : MonoBehaviour
 {
 
     public float speed = 10f;
@@ -18,11 +18,24 @@ public class ShipMovement : MonoBehaviour
     }
 
 
-    public void Execute(Vector3 moveDirection, Vector3 objective, bool dodge)
+
+    public void SideMove(Vector2 moveDirection)
     {
         rigidbody.velocity = moveDirection * speed;
-        transform.LookAt(objective);
     }
+
+
+    public void LookAt(Vector3 position)
+    {
+        transform.LookAt(position);
+    }
+
+
+    public void Dodge()
+    {
+        //Coroutine during X seconds ??
+    }
+
 
 
 }
