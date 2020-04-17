@@ -7,18 +7,6 @@ public class DamageComponent : MonoBehaviour
     public float damage = 1f;
 
 
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
         string tag = other.gameObject.tag;

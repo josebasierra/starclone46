@@ -16,8 +16,8 @@ public class ScreenAimComponent : MonoBehaviour
 
     void Start()
     {
-        scope1 = Instantiate(scope1Prefab, this.gameObject.transform).transform;
-        scope2 = Instantiate(scope2Prefab, this.gameObject.transform).transform;
+        scope1 = Instantiate(scope1Prefab).transform;
+        scope2 = Instantiate(scope2Prefab).transform;
     }
 
 
