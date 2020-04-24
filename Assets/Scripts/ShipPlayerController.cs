@@ -18,7 +18,7 @@ public class ShipPlayerController : MonoBehaviour
 
     void Update()
     {
-        Vector2 moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 1);
         Vector3 objective = Vector3.zero;
 
         if (aimComponent != null)
@@ -28,7 +28,7 @@ public class ShipPlayerController : MonoBehaviour
 
         if (moveComponent != null)
         {
-            moveComponent.SideMove(moveDirection);
+            moveComponent.Move(moveDirection);
             moveComponent.LookAt(objective);
         }
 

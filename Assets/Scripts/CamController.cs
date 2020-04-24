@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class CamController : MonoBehaviour
 {
-    public float smooth = 0.01f;
+    public float speed = 0.01f;
     public float distanceToPlayer = 10f;
 
     Transform player;
-    Transform playerRail;
-
 
 
     // Update camera position after the other objects positions has been updated
@@ -17,15 +15,13 @@ public class CamController : MonoBehaviour
     {
         if (player == null) FindPlayer();
 
-        Vector3 newPosition = playerRail.position - playerRail.forward*distanceToPlayer;
-        //transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smooth);
-        transform.position = Vector3.Lerp(transform.position, newPosition, smooth*Time.deltaTime);
-        transform.rotation = playerRail.rotation;
+        Vector3 newPosition = new Vector3(0f, 0f, player.position.z - distanceToPlayer);
+        transform.position = newPosition;
+        //transform.position = Vector3.Lerp(transform.position, newPosition, speed*Time.deltaTime);
     }
 
     void FindPlayer()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerRail = player.parent;
     }
 }
