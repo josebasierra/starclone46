@@ -11,7 +11,6 @@ public class ShipMoveComponent : MonoBehaviour
     public Vector2 positionLimits = new Vector2(10, 10);
 
     Rigidbody rigidbody;
-
     Transform rail;
     Vector3[] path;
     int target; // id to next position of the path to reach
@@ -21,7 +20,7 @@ public class ShipMoveComponent : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
 
-        // Find path object and get its data
+        // init path
         Transform pathTransform = GameObject.Find("Path").transform;
         int N = pathTransform.childCount;
 
@@ -32,7 +31,7 @@ public class ShipMoveComponent : MonoBehaviour
         }
         target = 0;
 
-        // init 'rail' object
+        // init rail
         rail = new GameObject().transform;
         rail.name = "Rail";
         rail.position = transform.position;
@@ -51,7 +50,12 @@ public class ShipMoveComponent : MonoBehaviour
         if (Vector3.Distance(rail.position, path[target]) < 2f)
         {
             target++;
-            if(target < path.Length) rail.LookAt(path[target]);
+            if (target < path.Length)  //rotate rail to look at the next node
+            {
+                //Quaternion rotation = Quaternion.FromToRotation(transform.forward, path[target] - transform.position);
+                //Quaternion.RotateTowards(transform.rotation, rotation, ??)
+                rail.LookAt(path[target]);
+            }
         }
     }
 
