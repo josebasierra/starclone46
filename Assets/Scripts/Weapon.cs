@@ -14,10 +14,9 @@ public class Weapon : MonoBehaviour
 
     float timeWithoutActivating = 0f;
 
-
     void Update()
     {
-        timeWithoutActivating += Time.deltaTime;    
+        timeWithoutActivating += Time.deltaTime;
     }
 
 
@@ -35,6 +34,5 @@ public class Weapon : MonoBehaviour
 
         timeWithoutActivating = 0f;
     }
-
 
 }

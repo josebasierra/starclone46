@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AttackComponent : MonoBehaviour
 {
-    public Weapon weapon1;
+    public Weapon weapon1; 
     public Weapon weapon2;
+    public EnemyWeapon weapon;
 
     public Weapon specialWeapon; //bomb, missile...
 
+    Vector3 playerPosition;
 
     public void BasicAttack()
     {
@@ -19,5 +21,9 @@ public class AttackComponent : MonoBehaviour
     public void SpecialAttack()
     {
 
+    }
+
+    public void enemyAttack(Vector3 playerPosition) {
+        weapon.enemyAttack(playerPosition);
     }
 }
