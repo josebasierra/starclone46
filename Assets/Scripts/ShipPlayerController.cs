@@ -7,12 +7,14 @@ public class ShipPlayerController : MonoBehaviour
     ShipMoveComponent moveComponent;
     ScreenAimComponent aimComponent;
     AttackComponent attackComponent;
+    PlayerStats stats;
 
     void Start()
     {
         moveComponent = this.GetComponent<ShipMoveComponent>();
         aimComponent = this.GetComponent<ScreenAimComponent>();
         attackComponent = this.GetComponent<AttackComponent>();
+        stats = this.GetComponent<PlayerStats>();
     }
 
 
@@ -45,5 +47,6 @@ public class ShipPlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Ship Collision");
+        stats.takeDamage(10); 
     }
 }
