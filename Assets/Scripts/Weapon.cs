@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public float cooldown = 1f;
-    public float shotSpeed = 5f;
+    public float cooldown = 0.5f;
+    public float shotSpeed = 20f;
     public int ammunition = -1; // -1 == infinite
     public GameObject prefabBullet;
 
@@ -31,6 +31,19 @@ public class Weapon : MonoBehaviour
         bullet.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
 
         Destroy(bullet, 10);    //destroy bullet after N seconds
+
+        timeWithoutActivating = 0f;
+    }
+
+    public void enemyAttack(Vector3 playerPosition) {
+        if (timeWithoutActivating < cooldown) return;
+
+        GameObject bullet = Instantiate(prefabBullet);
+        bullet.transform.position = releasePoint.position;
+
+        Vector3 shotDirection = (playerPosition - releasePoint.position).normalized;
+        bullet.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed; 
+        Destroy(bullet, 10);
 
         timeWithoutActivating = 0f;
     }

@@ -6,7 +6,6 @@ public class AttackComponent : MonoBehaviour
 {
     public Weapon weapon1; 
     public Weapon weapon2;
-    public EnemyWeapon weapon;
 
     public Weapon specialWeapon; //bomb, missile...
 
@@ -24,6 +23,6 @@ public class AttackComponent : MonoBehaviour
     }
 
     public void enemyAttack(Vector3 playerPosition) {
-        weapon.enemyAttack(playerPosition);
+        weapon1.enemyAttack(playerPosition);
     }
 }
