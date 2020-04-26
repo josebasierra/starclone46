@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
+        healthBar.setHealth(maxHealth);
     }
 
     public void takeDamage(int damage) {
