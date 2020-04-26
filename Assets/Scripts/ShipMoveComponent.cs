@@ -8,7 +8,7 @@ public class ShipMoveComponent : MonoBehaviour
     public float speed = 5f;
     public float lateralSpeed = 5f;
     public float rotationAngle = 10f;
-    public float boostMultiplier = 1.2f;
+    public float boostMultiplier = 10.0f;
     public Vector2 positionLimits = new Vector2(10, 10);
 
     Rigidbody rigidbody;
@@ -30,10 +30,11 @@ public class ShipMoveComponent : MonoBehaviour
     }
 
 
-    public void Accelerate(Vector2 moveDirection)
+    public void Accelerate(Vector3 moveDirection)
     {
+    	ApplyPositionLimits(ref moveDirection);
 
-
+    	rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, moveDirection.z * speed * boostMultiplier);
     }
 
 

@@ -34,7 +34,7 @@ public class EnemyShipBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Enemigo disparado");
+        //Debug.Log("Enemigo disparado");
         //explota nave al cabo de ciertos disparos...
     }
 }

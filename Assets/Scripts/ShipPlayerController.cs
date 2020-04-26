@@ -7,7 +7,9 @@ public class ShipPlayerController : MonoBehaviour
     ShipMoveComponent moveComponent;
     ScreenAimComponent aimComponent;
     AttackComponent attackComponent;
+    
     PlayerStats stats;
+    float timeWithoutActivating = 2.5f; //para el boost
 
     void Start()
     {
@@ -22,6 +24,8 @@ public class ShipPlayerController : MonoBehaviour
     {
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 1);
         Vector3 objective = Vector3.zero;
+        
+        timeWithoutActivating += Time.deltaTime;
 
         if (aimComponent != null)
         {
@@ -32,6 +36,13 @@ public class ShipPlayerController : MonoBehaviour
         {
             moveComponent.Move(moveDirection);
             moveComponent.LookAt(objective);
+            
+            if (Input.GetButton("Boost")) {
+                if (timeWithoutActivating >= stats.boostTime) {
+                    moveComponent.Accelerate(moveDirection);
+                    //timeWithoutActivating = 0f; //reiniciamos. NO FUNCIONA
+                }   
+            }
         }
 
         if (attackComponent != null)

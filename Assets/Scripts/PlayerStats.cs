@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public float boostTime = 2.5f; //tiempo desde el ultimo boost 
     //escudo y mas...
 
     public HealthBar healthBar;
