@@ -2,23 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMoveComponent : MonoBehaviour
+public class PlayerShipMove : MonoBehaviour
 {
 
     public float speed = 5f;
     public float lateralSpeed = 5f;
     public float rotationAngle = 10f;
-    public float boostMultiplier = 10.0f;
+
     public Vector2 positionLimits = new Vector2(10, 10);
 
+    public float boostMultiplier = 10.0f;
+    public float boostTime = 2f;
+    public float MaxboostFuel = 10;
+
+    private float boostFuel;
     Rigidbody rigidbody;
 
 
     void Start()
     {
+        boostFuel = MaxboostFuel;
         rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        boostFuel += Mathf.Min(1f, MaxboostFuel);
+    }
 
     public void Move(Vector3 moveDirection)
     {
@@ -30,12 +40,11 @@ public class ShipMoveComponent : MonoBehaviour
     }
 
 
-    public void Accelerate(Vector3 moveDirection)
+    public void Accelerate()
     {
-    	ApplyPositionLimits(ref moveDirection);
-
-    	rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, moveDirection.z * speed * boostMultiplier);
+        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * speed * boostMultiplier);
     }
+
 
 
     public void LookAt(Vector3 position)

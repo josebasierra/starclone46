@@ -25,25 +25,13 @@ public class Weapon : MonoBehaviour
         if (timeWithoutActivating < cooldown) return;
 
         GameObject bullet = Instantiate(prefabBullet);
+        bullet.tag = transform.parent.gameObject.tag;
         bullet.transform.position = releasePoint.position;
 
         Vector3 shotDirection = (endPoint.position - releasePoint.position).normalized;
         bullet.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
 
         Destroy(bullet, 10);    //destroy bullet after N seconds
-
-        timeWithoutActivating = 0f;
-    }
-
-    public void enemyAttack(Vector3 playerPosition) {
-        if (timeWithoutActivating < cooldown) return;
-
-        GameObject bullet = Instantiate(prefabBullet);
-        bullet.transform.position = releasePoint.position;
-
-        Vector3 shotDirection = (playerPosition - releasePoint.position).normalized;
-        bullet.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed; 
-        Destroy(bullet, 10);
 
         timeWithoutActivating = 0f;
     }

@@ -13,8 +13,8 @@ public class AttackComponent : MonoBehaviour
 
     public void BasicAttack()
     {
-        weapon1.Activate();
-        weapon2.Activate();
+        if(weapon1 != null) weapon1.Activate();
+        if(weapon2 != null) weapon2.Activate();
     } 
 
     public void SpecialAttack()
@@ -22,7 +22,4 @@ public class AttackComponent : MonoBehaviour
 
     }
 
-    public void enemyAttack(Vector3 playerPosition) {
-        weapon1.enemyAttack(playerPosition);
-    }
 }

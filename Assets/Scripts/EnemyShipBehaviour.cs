@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShipBehaviour : MonoBehaviour
 {
 	AttackComponent attackComponent;
-	ShipMoveComponent moveComponent;
+	PlayerShipMove moveComponent;
 
 	Vector3 playerPosition;
 
@@ -13,7 +13,7 @@ public class EnemyShipBehaviour : MonoBehaviour
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
-        moveComponent = this.GetComponent<ShipMoveComponent>();
+        moveComponent = this.GetComponent<PlayerShipMove>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class EnemyShipBehaviour : MonoBehaviour
 
         if (attackComponent != null)
         {
-            attackComponent.enemyAttack(playerPosition);
+            attackComponent.BasicAttack();
         }
     }
 

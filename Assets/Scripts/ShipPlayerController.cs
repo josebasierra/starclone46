@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ShipPlayerController : MonoBehaviour
 {
-    ShipMoveComponent moveComponent;
+    PlayerShipMove moveComponent;
     ScreenAimComponent aimComponent;
     AttackComponent attackComponent;
     
     PlayerStats stats;
-    float timeWithoutActivating = 2.5f; //para el boost
+
 
     void Start()
     {
-        moveComponent = this.GetComponent<ShipMoveComponent>();
+        moveComponent = this.GetComponent<PlayerShipMove>();
         aimComponent = this.GetComponent<ScreenAimComponent>();
         attackComponent = this.GetComponent<AttackComponent>();
         stats = this.GetComponent<PlayerStats>();
@@ -25,7 +25,6 @@ public class ShipPlayerController : MonoBehaviour
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 1);
         Vector3 objective = Vector3.zero;
         
-        timeWithoutActivating += Time.deltaTime;
 
         if (aimComponent != null)
         {
@@ -37,13 +36,11 @@ public class ShipPlayerController : MonoBehaviour
             moveComponent.Move(moveDirection);
             moveComponent.LookAt(objective);
             
-            if (Input.GetButton("Boost")) {
-                if (timeWithoutActivating >= stats.boostTime) {
-                    moveComponent.Accelerate(moveDirection);
-                    //timeWithoutActivating = 0f; //reiniciamos. NO FUNCIONA
-                }   
+            if (Input.GetButton("Boost") ) {
+                moveComponent.Accelerate();
             }
         }
+
 
         if (attackComponent != null)
         {
@@ -58,6 +55,11 @@ public class ShipPlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Ship Collision");
-        stats.takeDamage(10); 
+         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        stats.takeDamage(10);
     }
 }
