@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipPlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
-    PlayerShipMove moveComponent;
-    ScreenAimComponent aimComponent;
+    PlayerMovement moveComponent;
+    Crosshair aimComponent;
     AttackComponent attackComponent;
-    
-    PlayerStats stats;
+    Health health;
 
 
     void Start()
     {
-        moveComponent = this.GetComponent<PlayerShipMove>();
-        aimComponent = this.GetComponent<ScreenAimComponent>();
+        moveComponent = this.GetComponent<PlayerMovement>();
+        aimComponent = this.GetComponent<Crosshair>();
         attackComponent = this.GetComponent<AttackComponent>();
-        stats = this.GetComponent<PlayerStats>();
+        health = this.GetComponent<Health>();
     }
 
 
@@ -24,19 +23,21 @@ public class ShipPlayerController : MonoBehaviour
     {
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 1);
         Vector3 objective = Vector3.zero;
-        
+
 
         if (aimComponent != null)
         {
             objective = aimComponent.GetAimPosition();
+            moveDirection = (objective - transform.position).normalized;
         }
 
         if (moveComponent != null)
         {
             moveComponent.Move(moveDirection);
-            moveComponent.LookAt(objective);
-            
-            if (Input.GetButton("Boost") ) {
+            moveComponent.LookAt(transform.position + moveDirection * 10);
+
+            if (Input.GetButton("Boost"))
+            {
                 moveComponent.Accelerate();
             }
         }
@@ -55,11 +56,11 @@ public class ShipPlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Ship Collision");
-         
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        stats.takeDamage(10);
+        health.takeDamage(10);
     }
 }

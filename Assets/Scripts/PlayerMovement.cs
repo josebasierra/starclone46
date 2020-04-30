@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShipMove : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-
     public float speed = 5f;
     public float lateralSpeed = 5f;
     public float rotationAngle = 10f;
@@ -25,15 +24,17 @@ public class PlayerShipMove : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
+
     private void Update()
     {
         boostFuel += Mathf.Min(1f, MaxboostFuel);
     }
 
+
     public void Move(Vector3 moveDirection)
     {
         ApplyPositionLimits(ref moveDirection);
-        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, moveDirection.z * speed);
+        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, 1 * speed);
 
         //rotate test
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, - moveDirection.x * rotationAngle);

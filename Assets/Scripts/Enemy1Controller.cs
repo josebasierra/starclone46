@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipBehaviour : MonoBehaviour
+public class Enemy1Controller : MonoBehaviour
 {
 	AttackComponent attackComponent;
-	PlayerShipMove moveComponent;
+	PlayerMovement moveComponent;
 
 	Vector3 playerPosition;
 
@@ -13,7 +13,7 @@ public class EnemyShipBehaviour : MonoBehaviour
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
-        moveComponent = this.GetComponent<PlayerShipMove>();
+        moveComponent = this.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame

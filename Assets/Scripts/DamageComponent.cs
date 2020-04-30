@@ -9,11 +9,11 @@ public class DamageComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        string tag = other.gameObject.tag;
-        if(tag != this.gameObject.tag)
+        string otherTag = other.gameObject.tag;
+        if(otherTag != this.gameObject.tag)
         {
-            var stats = other.gameObject.GetComponent<PlayerStats>();
-            if (stats != null) stats.takeDamage(damage);
+            var health = other.gameObject.GetComponent<Health>();
+            if (health != null) health.takeDamage(damage);
         }
     }
 }
