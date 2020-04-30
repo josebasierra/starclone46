@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
 
     float timeWithoutActivating = 0f;
 
+
     void Update()
     {
         timeWithoutActivating += Time.deltaTime;
@@ -23,17 +24,19 @@ public class Weapon : MonoBehaviour
     public void Activate()
     {
         if (timeWithoutActivating < cooldown) return;
+        timeWithoutActivating = 0f;
 
-        GameObject bullet = Instantiate(prefabBullet);
-        bullet.tag = transform.parent.gameObject.tag;
-        bullet.transform.position = releasePoint.position;
+        Transform bulletTransform = Instantiate(prefabBullet).transform;
+        bulletTransform.tag = transform.parent.gameObject.tag;
+
+        bulletTransform.position = releasePoint.position;
+        bulletTransform.LookAt(endPoint);
+        bulletTransform.Rotate(new Vector3(90, 0, 0));
 
         Vector3 shotDirection = (endPoint.position - releasePoint.position).normalized;
-        bullet.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
+        bulletTransform.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
 
-        Destroy(bullet, 10);    //destroy bullet after N seconds
-
-        timeWithoutActivating = 0f;
+        Destroy(bulletTransform.gameObject, 6);    //destroy bullet after N seconds
     }
 
 }

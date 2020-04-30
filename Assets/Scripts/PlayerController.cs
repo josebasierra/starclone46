@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     PlayerMovement moveComponent;
     Crosshair aimComponent;
     AttackComponent attackComponent;
-    
-    Health stats;
 
 
     void Start()
@@ -16,7 +14,6 @@ public class PlayerController : MonoBehaviour
         moveComponent = this.GetComponent<PlayerMovement>();
         aimComponent = this.GetComponent<Crosshair>();
         attackComponent = this.GetComponent<AttackComponent>();
-        stats = this.GetComponent<Health>();
     }
 
 
@@ -55,10 +52,5 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Ship Collision");
          
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        stats.takeDamage(10);
     }
 }

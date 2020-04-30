@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
@@ -1614,7 +1614,7 @@ Transform:
   - {fileID: 1321564252}
   - {fileID: 1487871777}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -184.55899, z: 0}
 --- !u!114 &553470638
 MonoBehaviour:
@@ -2699,7 +2699,6 @@ GameObject:
   - component: {fileID: 951033131}
   - component: {fileID: 6147365220360468587}
   - component: {fileID: 951033127}
-  - component: {fileID: 951033128}
   - component: {fileID: 4963897598698816419}
   - component: {fileID: 7637780720615937651}
   - component: {fileID: 3916735726421253692}
@@ -2738,18 +2737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0327f905865e58a42b3681d1c1859cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &951033128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951033125}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ae35bee36e01445be25a97ca570e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &951033130
 Transform:
   m_ObjectHideFlags: 0
@@ -2765,7 +2752,7 @@ Transform:
   - {fileID: 2513055598274047920}
   - {fileID: 368245059}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &951033131
 Rigidbody:
@@ -2865,7 +2852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -5160,7 +5147,7 @@ Transform:
   - {fileID: 1921557141}
   - {fileID: 573204730}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788493668
 GameObject:
@@ -5767,7 +5754,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2034688939
 GameObject:
@@ -6321,8 +6308,8 @@ MonoBehaviour:
     type: 3}
   scope2Prefab: {fileID: 6126997455859592936, guid: b642e3158d2c8604199d404986a44713,
     type: 3}
-  crosshairDistance: 20
-  positionLimits: {x: 0, y: 0}
+  crosshairDistance: 60
+  positionLimits: {x: 80, y: 80}
 --- !u!114 &4963897598698816419
 MonoBehaviour:
   m_ObjectHideFlags: 0
