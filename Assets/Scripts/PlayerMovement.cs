@@ -8,35 +8,38 @@ public class PlayerMovement : MonoBehaviour
     public float forwardSpeed = 5f;
     public float lateralSpeed = 5f;
     public float rotationAngle = 10f;
+    public float rotationSpeed = 140f;
     public Vector2 positionLimits = new Vector2(10, 10);
 
     [Header("Boost Settings")]
     public float boostMultiplier = 10.0f;
-    public float fuelUse = 1f;
+    public float boostFuelPerSecond = 1f;
 
     [Header("Roll Settings")]
     public float rollMultiplier = 2;
     public float rollDuration = 1;
-    public int turns = 2;        //vueltas que da la nave sobre si misma en un roll
+    public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
 
     [Header("Fuel Settings")]
     public float fuelPerSecond = 0.5f;
-    public float MaxboostFuel = 10.0f;
+    public float MaxFuel = 10.0f;
     public BoostFuelBar boostFuelBar;
 
 
 
-    bool rolling;
+    bool isRolling;
+    bool isTilting;
     bool canBoost;
     float boostFuel;
     Rigidbody rigidbody;
 
     void Start()
     {
-        rolling = false;
+        isRolling = false;
+        isTilting = false;
         canBoost = false; 
-        boostFuel = MaxboostFuel;
-        boostFuelBar.setFuel(MaxboostFuel);
+        boostFuel = MaxFuel;
+        boostFuelBar.setFuel(MaxFuel);
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -44,17 +47,20 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ApplyPositionLimits();
-        if (boostFuel <= MaxboostFuel) boostFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
+        if (boostFuel <= MaxFuel) boostFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
         boostFuelBar.setFuel(boostFuel);
     }
 
 
     public void Move(Vector3 moveDirection)
     {
-        if (rolling) return;
+        if (isRolling) return;
 
         rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, 1 * forwardSpeed);
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, - moveDirection.x * rotationAngle);
+
+        if (isTilting) return;
+        var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y,-moveDirection.x*rotationAngle);
+        transform.rotation =  Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed*Time.deltaTime);
     }
 
 
@@ -63,12 +69,9 @@ public class PlayerMovement : MonoBehaviour
         if (boostFuel > 0.0f && canBoost)
         {
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
-            boostFuel -= fuelUse * Time.deltaTime;
-
-            boostFuelBar.setFuel(boostFuel);
-            Debug.Log(boostFuel);
+            boostFuel -= boostFuelPerSecond * Time.deltaTime;
         }
-        else if (boostFuel >= 10 && !canBoost)
+        else if (boostFuel >= MaxFuel && !canBoost)
         {
             canBoost = true;
         }
@@ -79,8 +82,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Roll(Vector2 rollDirection)
     {
-        if (!rolling)
+        if (!isRolling)
             StartCoroutine(Rolling(rollDirection));
+    }
+
+
+    public void StartTilting(int direction)
+    {
+        StartCoroutine(Tilting(direction));
+    }
+
+
+    public void StopTilting()
+    {
+        isTilting = false;
     }
 
 
@@ -88,13 +103,12 @@ public class PlayerMovement : MonoBehaviour
     {
         var rotation = Quaternion.LookRotation(position - transform.position).eulerAngles;
         transform.rotation = Quaternion.Euler(rotation.x, rotation.y, transform.eulerAngles.z);
-        //transform.LookAt(position);
     }
 
 
     private IEnumerator Rolling(Vector2 rollDirection)
     {
-        rolling = true;
+        isRolling = true;
 
         float timeRolling = 0;
         float turnDirection = rollDirection.x >= 0 ? -1 : 1;
@@ -109,7 +123,19 @@ public class PlayerMovement : MonoBehaviour
             timeRolling += Time.deltaTime;
             yield return null;
         }
-        rolling = false;
+        isRolling = false;
+    }
+
+
+    private IEnumerator Tilting(int direction)
+    {
+        isTilting = true;
+        while (isTilting && !isRolling)
+        {
+            var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -direction * 90);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            yield return null;
+        }
     }
 
 

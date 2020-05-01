@@ -208,12 +208,16 @@ MonoBehaviour:
   forwardSpeed: 15
   lateralSpeed: 15
   rotationAngle: 35
+  rotationSpeed: 180
   positionLimits: {x: 10, y: 6}
   boostMultiplier: 2.5
-  MaxboostFuel: 10
+  boostFuelPerSecond: 1
   rollMultiplier: 1
-  rollDuration: 0.5
-  turns: 1
+  rollDuration: 0.45
+  turns: 1.1
+  fuelPerSecond: 0.5
+  MaxFuel: 10
+  boostFuelBar: {fileID: 0}
 --- !u!114 &3447441065435424463
 MonoBehaviour:
   m_ObjectHideFlags: 0

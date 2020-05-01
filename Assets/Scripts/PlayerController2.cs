@@ -41,7 +41,6 @@ public class PlayerController2 : MonoBehaviour
             moveDirection = (objective - transform.position).normalized;
             moveDirection.x *= 2f;
             moveDirection.y *= 2f;
-
         }
 
         if (moveComponent != null)
@@ -53,6 +52,7 @@ public class PlayerController2 : MonoBehaviour
             {
                 moveComponent.Boost();
             }
+
             if (Input.GetKeyDown("w"))
             {
                 if (timeSinceLastTap_W < doubleTapTime)
@@ -65,17 +65,31 @@ public class PlayerController2 : MonoBehaviour
                     moveComponent.Roll(Vector2.down);
                 timeSinceLastTap_S = 0;
             }
+
             if (Input.GetKeyDown("a"))
             {
                 if (timeSinceLastTap_A < doubleTapTime)
                     moveComponent.Roll(Vector2.left);
+                else 
+                    moveComponent.StartTilting(-1);
                 timeSinceLastTap_A = 0;
             }
+            else if (Input.GetKeyUp("a"))
+            {
+                moveComponent.StopTilting();
+            }
+
             if (Input.GetKeyDown("d"))
             {
                 if (timeSinceLastTap_D < doubleTapTime)
                     moveComponent.Roll(Vector2.right);
+                else
+                    moveComponent.StartTilting(1);
                 timeSinceLastTap_D = 0;
+            }
+            else if (Input.GetKeyUp("d"))
+            {
+                moveComponent.StopTilting();
             }
 
             timeSinceLastTap_W += Time.deltaTime;
