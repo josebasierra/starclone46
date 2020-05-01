@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Boost Settings")]
     public float boostMultiplier = 10.0f;
-    public float MaxboostFuel = 10;
+    public float MaxboostFuel = 10.0f;
+    public BoostFuelBar boostFuelBar;
 
     [Header("Roll Settings")]
     public float rollMultiplier = 2;
@@ -23,11 +24,11 @@ public class PlayerMovement : MonoBehaviour
     float boostFuel;
     Rigidbody rigidbody;
 
-
     void Start()
     {
         rolling = false;
         boostFuel = MaxboostFuel;
+        boostFuelBar.setFuel(MaxboostFuel);
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -35,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ApplyPositionLimits();
-        boostFuel += Mathf.Min(1f, MaxboostFuel);
+        if (boostFuel <= MaxboostFuel) boostFuel += 1.5f; //se va aumentando el fuel
+        boostFuelBar.setFuel(boostFuel);
     }
 
 
@@ -50,7 +52,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Boost()
     {
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
+        if (boostFuel > 0.0f) {
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
+            boostFuel -= 1.75f;
+            boostFuelBar.setFuel(boostFuel);
+            Debug.Log(boostFuel);
+        } 
+        else {
+            Debug.Log("No tienes suficiente fuel");
+        }
     }
 
 

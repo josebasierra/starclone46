@@ -34,8 +34,9 @@ public class PlayerController : MonoBehaviour
             moveComponent.LookAt(objective);
             
             if (Input.GetButton("Boost") ) {
-                moveComponent.Boost();
+                //Debug.Log("Presiono");
             }
+
         }
 
         if (attackComponent != null)

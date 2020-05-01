@@ -25,6 +25,7 @@ public class PlayerController2 : MonoBehaviour
         timeSinceLastTap_S = doubleTapTime;
         timeSinceLastTap_A = doubleTapTime;
         timeSinceLastTap_D = doubleTapTime;
+
     }
 
 
@@ -91,7 +92,6 @@ public class PlayerController2 : MonoBehaviour
             }
         }
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {

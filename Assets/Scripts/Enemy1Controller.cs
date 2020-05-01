@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy1Controller : MonoBehaviour
 {
 	AttackComponent attackComponent;
-	PlayerMovement moveComponent;
+	BasicMovement moveComponent;
 
 	Vector3 playerPosition;
 
@@ -13,7 +13,7 @@ public class Enemy1Controller : MonoBehaviour
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
-        moveComponent = this.GetComponent<PlayerMovement>();
+        moveComponent = this.GetComponent<BasicMovement>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class Enemy1Controller : MonoBehaviour
     	if (moveComponent != null)
         {
             moveComponent.LookAt(playerPosition);
+            moveComponent.MoveTo(playerPosition);
         }
 
         if (attackComponent != null)
