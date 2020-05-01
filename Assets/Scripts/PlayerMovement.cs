@@ -4,48 +4,61 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    [Header("Move Settings")]
+    public float forwardSpeed = 5f;
     public float lateralSpeed = 5f;
     public float rotationAngle = 10f;
-
     public Vector2 positionLimits = new Vector2(10, 10);
 
+    [Header("Boost Settings")]
     public float boostMultiplier = 10.0f;
-    public float boostTime = 2f;
     public float MaxboostFuel = 10;
 
-    private float boostFuel;
+    [Header("Roll Settings")]
+    public float rollMultiplier = 2;
+    public float rollDuration = 1;
+    public int turns = 2;        //vueltas que da la nave sobre si misma en un roll
+
+    bool rolling;
+    float boostFuel;
     Rigidbody rigidbody;
 
 
     void Start()
     {
+        rolling = false;
         boostFuel = MaxboostFuel;
         rigidbody = GetComponent<Rigidbody>();
     }
 
 
-    private void Update()
+    void Update()
     {
+        ApplyPositionLimits();
         boostFuel += Mathf.Min(1f, MaxboostFuel);
     }
 
 
     public void Move(Vector3 moveDirection)
     {
-        ApplyPositionLimits(ref moveDirection);
-        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, 1 * speed);
+        if (rolling) return;
 
-        //rotate test
+        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, 1 * forwardSpeed);
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, - moveDirection.x * rotationAngle);
     }
 
 
-    public void Accelerate()
+    public void Boost()
     {
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * speed * boostMultiplier);
+        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
     }
 
+
+    public void Roll(Vector2 rollDirection)
+    {
+        if (!rolling)
+            StartCoroutine(Rolling(rollDirection));
+    }
 
 
     public void LookAt(Vector3 position)
@@ -56,37 +69,57 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void Dodge()
+
+    private IEnumerator Rolling(Vector2 rollDirection)
     {
-        //Coroutine during X seconds ??
+        rolling = true;
+
+        float timeRolling = 0;
+        float turnDirection = rollDirection.x >= 0 ? -1 : 1;
+
+        rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollMultiplier, rollDirection.y * lateralSpeed * rollMultiplier, rigidbody.velocity.z);
+
+        while(timeRolling < rollDuration)
+        {
+            float rotationIncrement =  turnDirection * turns * 360 / rollDuration * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + rotationIncrement);
+
+            timeRolling += Time.deltaTime;
+            yield return null;
+        }
+        rolling = false;
     }
 
 
-    // check positions limits and correct moveDirection to slow down ship when outside them
-    private void ApplyPositionLimits(ref Vector3 moveDirection)
+    private void ApplyPositionLimits()
     {
         float x = transform.localPosition.x;
         float y = transform.localPosition.y;
 
+        float vx = rigidbody.velocity.x;
+        float vy = rigidbody.velocity.y;
+
         float k = 0.8f;
 
-        if (x >= k*positionLimits.x && moveDirection.x > 0)
+        if (x >= k * positionLimits.x && vx > 0)
         {
-            moveDirection.x *= 1 - (x - k*positionLimits.x) / (positionLimits.x);
+            vx *= 1 - (x - k * positionLimits.x) / (positionLimits.x);
         }
-        else if (x <= -k*positionLimits.x && moveDirection.x < 0)
+        else if (x <= -k * positionLimits.x && vx < 0)
         {
-            moveDirection.x *= 1 - (x - -k*positionLimits.x) / (-positionLimits.x);
+            vx *= 1 - (x - -k * positionLimits.x) / (-positionLimits.x);
         }
 
-        if (y >= k*positionLimits.y && moveDirection.y > 0)
+        if (y >= k * positionLimits.y && vy > 0)
         {
-            moveDirection.y *= 1 - (y - k*positionLimits.y) / (positionLimits.y);
+            vy *= 1 - (y - k * positionLimits.y) / (positionLimits.y);
         }
-        else if (y <= -k*positionLimits.y && moveDirection.y < 0)
+        else if (y <= -k * positionLimits.y && vy < 0)
         {
-            moveDirection.y *= 1 - (y - -k*positionLimits.y) / (-positionLimits.y);
+            vy *= 1 - (y - -k * positionLimits.y) / (-positionLimits.y);
         }
+
+        rigidbody.velocity = new Vector3(vx, vy, rigidbody.velocity.z);
     }
 
 

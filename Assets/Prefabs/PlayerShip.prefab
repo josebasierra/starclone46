@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 181546747565865559}
   - component: {fileID: 551498785789589020}
   m_Layer: 0
-  m_Name: PlayerMouseMoveTest
+  m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,13 +205,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e0e6c1f5d6acd42b9aae8458b48d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lateralSpeed: 30.81
-  rotationAngle: 45
-  positionLimits: {x: 8, y: 6}
+  forwardSpeed: 15
+  lateralSpeed: 15
+  rotationAngle: 35
+  positionLimits: {x: 10, y: 6}
   boostMultiplier: 2.5
-  boostTime: 0.5
   MaxboostFuel: 10
+  rollMultiplier: 1
+  rollDuration: 0.5
+  turns: 1
 --- !u!114 &3447441065435424463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +245,8 @@ MonoBehaviour:
     type: 3}
   scope2Prefab: {fileID: 6126997455859592936, guid: b642e3158d2c8604199d404986a44713,
     type: 3}
-  scopeDistance: 60
+  crosshairDistance: 60
+  positionLimits: {x: 60, y: 35}
 --- !u!114 &551498785789589020
 MonoBehaviour:
   m_ObjectHideFlags: 0

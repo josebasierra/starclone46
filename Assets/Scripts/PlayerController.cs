@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             moveComponent.LookAt(objective);
             
             if (Input.GetButton("Boost") ) {
-                moveComponent.Accelerate();
+                moveComponent.Boost();
             }
         }
 
