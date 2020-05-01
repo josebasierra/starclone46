@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
 	public Gradient gradient;
 	public Image fill;
 
+
 	public void setHealth(int health)
 	{
 		if (health == 100) {

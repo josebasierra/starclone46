@@ -19,7 +19,7 @@ public class AttackComponent : MonoBehaviour
 
     public void SpecialAttack()
     {
-
+        if (specialWeapon != null) specialWeapon.Activate();
     }
 
 }

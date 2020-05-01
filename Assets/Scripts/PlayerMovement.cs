@@ -12,21 +12,29 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Boost Settings")]
     public float boostMultiplier = 10.0f;
-    public float MaxboostFuel = 10.0f;
-    public BoostFuelBar boostFuelBar;
+    public float fuelUse = 1f;
 
     [Header("Roll Settings")]
     public float rollMultiplier = 2;
     public float rollDuration = 1;
     public int turns = 2;        //vueltas que da la nave sobre si misma en un roll
 
+    [Header("Fuel Settings")]
+    public float fuelPerSecond = 0.5f;
+    public float MaxboostFuel = 10.0f;
+    public BoostFuelBar boostFuelBar;
+
+
+
     bool rolling;
+    bool canBoost;
     float boostFuel;
     Rigidbody rigidbody;
 
     void Start()
     {
         rolling = false;
+        canBoost = false; 
         boostFuel = MaxboostFuel;
         boostFuelBar.setFuel(MaxboostFuel);
         rigidbody = GetComponent<Rigidbody>();
@@ -36,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ApplyPositionLimits();
-        if (boostFuel <= MaxboostFuel) boostFuel += 1.5f; //se va aumentando el fuel
+        if (boostFuel <= MaxboostFuel) boostFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
         boostFuelBar.setFuel(boostFuel);
     }
 
@@ -52,15 +60,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Boost()
     {
-        if (boostFuel > 0.0f) {
+        if (boostFuel > 0.0f && canBoost)
+        {
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
-            boostFuel -= 1.75f;
+            boostFuel -= fuelUse * Time.deltaTime;
+
             boostFuelBar.setFuel(boostFuel);
             Debug.Log(boostFuel);
-        } 
-        else {
-            Debug.Log("No tienes suficiente fuel");
         }
+        else if (boostFuel >= 10 && !canBoost)
+        {
+            canBoost = true;
+        }
+        else if (boostFuel <= 0) canBoost = false;
+    
     }
 
 
@@ -77,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(rotation.x, rotation.y, transform.eulerAngles.z);
         //transform.LookAt(position);
     }
-
 
 
     private IEnumerator Rolling(Vector2 rollDirection)

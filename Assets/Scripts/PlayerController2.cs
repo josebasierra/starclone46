@@ -90,6 +90,10 @@ public class PlayerController2 : MonoBehaviour
             {
                 attackComponent.BasicAttack();
             }
+            if (Input.GetButton("Fire2"))
+            {
+                attackComponent.SpecialAttack();
+            }
         }
     }
 
