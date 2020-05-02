@@ -44,7 +44,7 @@ public class LaserWeapon : MonoBehaviour, IWeapon
             if (health != null)
             {
                 Debug.Log("Laser damage!");
-                health.takeDamage(dps * Time.deltaTime);
+                health.TakeDamage(dps * Time.deltaTime);
             }
             lineRenderer.SetPosition(1, hit.point);
         }

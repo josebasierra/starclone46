@@ -8,23 +8,21 @@ public class Health : MonoBehaviour
     public float currentHealth;
     //escudo y mas...
 
-    public HealthBar healthBar;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-        healthBar.setHealth((int)maxHealth);
     }
 
-    public void takeDamage(float damage) {
+
+    public void TakeDamage(float damage) {
         currentHealth -= damage;
-        healthBar.setHealth((int)currentHealth);
-		
         if (currentHealth <= 0)
             Debug.Log("Estas muerto colega");
+    }
 
 
-
+    public float GetHealth() {
+        return currentHealth;
     }
 }

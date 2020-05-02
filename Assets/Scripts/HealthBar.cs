@@ -10,9 +10,17 @@ public class HealthBar : MonoBehaviour
 	public Gradient gradient;
 	public Image fill;
 
+	Health healthComponent;
+	float health;
 
-	public void setHealth(int health)
-	{
+	void Start() {
+		healthComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+		health = healthComponent.GetHealth();
+	}
+
+	void Update() {
+		health = healthComponent.GetHealth();
+
 		if (health == 100) {
 			slider.maxValue = health;
 			slider.value = health;
@@ -25,6 +33,11 @@ public class HealthBar : MonoBehaviour
 
 			fill.color = gradient.Evaluate(slider.normalizedValue);
 		}
+	}
+
+	public void setHealth(int health)
+	{
+		
 		
 	}
 

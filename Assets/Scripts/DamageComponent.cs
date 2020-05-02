@@ -13,7 +13,7 @@ public class DamageComponent : MonoBehaviour
         if(otherTag != this.gameObject.tag)
         {
             var health = other.gameObject.GetComponent<Health>();
-            if (health != null) health.takeDamage(damage);
+            if (health != null) health.TakeDamage(damage);
         }
     }
 }
