@@ -12,11 +12,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 positionLimits = new Vector2(10, 10);
 
     [Header("Boost Settings")]
-    public float boostMultiplier = 10.0f;
+    public float boostSpeedMultiplier = 2f;
     public float boostFuelPerSecond = 1f;
 
+    [Header("SlowDown Settings")]
+    public float slowForwardMultiplier = 0.5f;
+    public float slowLateralMultiplier = 0.2f;
+
     [Header("Roll Settings")]
-    public float rollMultiplier = 2;
+    public float rollSpeedMultiplier = 2;
     public float rollDuration = 1;
     public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
 
@@ -29,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool isRolling;
     bool isTilting;
+    bool isSlowingDown;
     bool canBoost;
     float boostFuel;
     Rigidbody rigidbody;
@@ -37,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRolling = false;
         isTilting = false;
+        isSlowingDown = false;
         canBoost = false; 
         boostFuel = MaxFuel;
         boostFuelBar.setFuel(MaxFuel);
@@ -56,29 +62,43 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isRolling) return;
 
-        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, 1 * forwardSpeed);
+        rigidbody.velocity = new Vector3(moveDirection.x * lateralSpeed, moveDirection.y * lateralSpeed, forwardSpeed);
 
         if (isTilting) return;
-        var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y,-moveDirection.x*rotationAngle);
+
+        // spaceship balance effect when moving to sides
+        float slowDownFactor = isSlowingDown ? slowLateralMultiplier : 1;
+        var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y,slowDownFactor * -moveDirection.x*rotationAngle);
         transform.rotation =  Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed*Time.deltaTime);
     }
 
 
     public void Boost()
     {
+        if (isSlowingDown) return;
+
         if (boostFuel > 0.0f && canBoost)
         {
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, 1f * forwardSpeed * boostMultiplier);
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, forwardSpeed * boostSpeedMultiplier);
             boostFuel -= boostFuelPerSecond * Time.deltaTime;
         }
-        else if (boostFuel >= MaxFuel && !canBoost)
-        {
+        else if (boostFuel >= 0.2*MaxFuel && !canBoost)
             canBoost = true;
-        }
-        else if (boostFuel <= 0) canBoost = false;
-    
+        else if (boostFuel <= 0) 
+            canBoost = false;
     }
 
+
+    public void SlowDown()
+    {
+        isSlowingDown = true;
+        rigidbody.velocity = new Vector3(rigidbody.velocity.x * slowLateralMultiplier, rigidbody.velocity.y * slowLateralMultiplier,  forwardSpeed * slowForwardMultiplier);
+    }
+
+    public void StopSlowingDown()
+    {
+        isSlowingDown = false;
+    }
 
     public void Roll(Vector2 rollDirection)
     {
@@ -89,7 +109,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void StartTilting(int direction)
     {
-        StartCoroutine(Tilting(direction));
+        if (!isTilting)
+            StartCoroutine(Tilting(direction));
     }
 
 
@@ -113,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
         float timeRolling = 0;
         float turnDirection = rollDirection.x >= 0 ? -1 : 1;
 
-        rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollMultiplier, rollDirection.y * lateralSpeed * rollMultiplier, rigidbody.velocity.z);
+        rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollSpeedMultiplier, rollDirection.y * lateralSpeed * rollSpeedMultiplier, rigidbody.velocity.z);
 
         while(timeRolling < rollDuration)
         {
@@ -130,10 +151,13 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Tilting(int direction)
     {
         isTilting = true;
-        while (isTilting && !isRolling)
+        while (isTilting)
         {
-            var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -direction * 90);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            if (!isRolling)
+            {
+                var targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -direction * 90);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * 1.5f * Time.deltaTime);
+            }
             yield return null;
         }
     }

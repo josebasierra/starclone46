@@ -53,6 +53,15 @@ public class PlayerController2 : MonoBehaviour
                 moveComponent.Boost();
             }
 
+            if (Input.GetButton("SlowDown"))
+            {
+                moveComponent.SlowDown();
+            }
+            else if (Input.GetButtonUp("SlowDown"))
+            {
+                moveComponent.StopSlowingDown();
+            }
+
             if (Input.GetKeyDown("w"))
             {
                 if (timeSinceLastTap_W < doubleTapTime)
@@ -70,8 +79,8 @@ public class PlayerController2 : MonoBehaviour
             {
                 if (timeSinceLastTap_A < doubleTapTime)
                     moveComponent.Roll(Vector2.left);
-                else 
-                    moveComponent.StartTilting(-1);
+
+                moveComponent.StartTilting(-1);
                 timeSinceLastTap_A = 0;
             }
             else if (Input.GetKeyUp("a"))
@@ -83,8 +92,8 @@ public class PlayerController2 : MonoBehaviour
             {
                 if (timeSinceLastTap_D < doubleTapTime)
                     moveComponent.Roll(Vector2.right);
-                else
-                    moveComponent.StartTilting(1);
+                
+                moveComponent.StartTilting(1);
                 timeSinceLastTap_D = 0;
             }
             else if (Input.GetKeyUp("d"))
@@ -94,7 +103,7 @@ public class PlayerController2 : MonoBehaviour
 
             timeSinceLastTap_W += Time.deltaTime;
             timeSinceLastTap_S += Time.deltaTime;
-            timeSinceLastTap_A  += Time.deltaTime;
+            timeSinceLastTap_A += Time.deltaTime;
             timeSinceLastTap_D += Time.deltaTime;
         }
 

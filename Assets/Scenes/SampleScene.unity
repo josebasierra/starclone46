@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: recharge
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 627824234621983618, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+        type: 3}
+      propertyPath: boostSpeedMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: m_LocalPosition.x

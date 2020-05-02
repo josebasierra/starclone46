@@ -205,13 +205,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e0e6c1f5d6acd42b9aae8458b48d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 15
+  forwardSpeed: 20
   lateralSpeed: 15
   rotationAngle: 35
-  rotationSpeed: 180
+  rotationSpeed: 140
   positionLimits: {x: 10, y: 6}
-  boostMultiplier: 2.5
+  boostMultiplier: 2
   boostFuelPerSecond: 1
+  slowForwardMultiplier: 0.5
+  slowLateralMultiplier: 0.2
   rollMultiplier: 1
   rollDuration: 0.45
   turns: 1.1
