@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon : MonoBehaviour, IWeapon
 {
     public float cooldown = 0.5f;
     public float shotSpeed = 20f;

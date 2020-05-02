@@ -45,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
         isSlowingDown = false;
         canBoost = false; 
         boostFuel = MaxFuel;
-        boostFuelBar.setFuel(MaxFuel);
+        if (boostFuelBar != null)
+            boostFuelBar.setFuel(MaxFuel);
         rigidbody = GetComponent<Rigidbody>();
     }
 
