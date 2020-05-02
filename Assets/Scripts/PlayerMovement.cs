@@ -27,9 +27,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Fuel Settings")]
     public float fuelPerSecond = 2.5f;
     public float MaxFuel = 10.0f;
-    public BoostFuelBar boostFuelBar;
-
-
 
     bool isRolling;
     bool isTilting;
@@ -45,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         isSlowingDown = false;
         canBoost = false; 
         boostFuel = MaxFuel;
-        boostFuelBar.setFuel(MaxFuel);
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -54,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
     {
         ApplyPositionLimits();
         if (boostFuel <= MaxFuel) boostFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
-        boostFuelBar.setFuel(boostFuel);
     }
 
 
@@ -127,6 +122,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    public float getFuel() {
+        return boostFuel;
+    }
+
     private IEnumerator Rolling(Vector2 rollDirection)
     {
         isRolling = true;
@@ -161,7 +160,6 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
     }
-
 
     private void ApplyPositionLimits()
     {

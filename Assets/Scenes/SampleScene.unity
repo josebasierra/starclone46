@@ -1535,6 +1535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 388648293}
   fill: {fileID: 1693751548}
+  player: {fileID: 829317611}
 --- !u!1 &416335286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2803,12 @@ Transform:
   m_Father: {fileID: 1186068134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 28.1, y: -32.609, z: 0}
+--- !u!1 &829317611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6779893915376304141, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+    type: 3}
+  m_PrefabInstance: {fileID: 69131567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &859911125
 GameObject:
   m_ObjectHideFlags: 0
