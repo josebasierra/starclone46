@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Boost Settings")]
     public float boostSpeedMultiplier = 2f;
-    public float boostFuelPerSecond = 1f;
+    public float boostFuelPerSecond = 10.5f;
 
     [Header("SlowDown Settings")]
     public float slowForwardMultiplier = 0.5f;
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
 
     [Header("Fuel Settings")]
-    public float fuelPerSecond = 0.5f;
+    public float fuelPerSecond = 2.5f;
     public float MaxFuel = 10.0f;
     public BoostFuelBar boostFuelBar;
 
