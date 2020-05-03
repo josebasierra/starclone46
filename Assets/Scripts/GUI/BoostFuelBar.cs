@@ -10,23 +10,18 @@ public class BoostFuelBar : MonoBehaviour
 	
 	PlayerMovement moveComponent;
 
-	float fuel;
 
 	void Start() {
 		moveComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-		fuel = moveComponent.getFuel();
+		slider.maxValue = 1.0f;
 	}
 
-	void Update() {
-		fuel = moveComponent.getFuel();
-		if (fuel == 10.0) {
-			slider.maxValue = fuel;
-			slider.value = fuel;
-		}
 
-		else {
-			slider.value = fuel;
-		}
+	void Update() {
+		float currentFuel = moveComponent.GetCurrentFuel();
+		float maxFuel = moveComponent.GetMaxFuel();
+
+		slider.value = currentFuel / maxFuel;
 	}
 }
 

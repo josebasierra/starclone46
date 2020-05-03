@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class AttackComponent : MonoBehaviour
 {
-    public Weapon weapon1; 
-    public Weapon weapon2;
+    public GameObject weapon1object; 
+    public GameObject weapon2object;
+    public GameObject specialWeaponObject; //bomb, missile...
 
-    public Weapon specialWeapon; //bomb, missile...
+    IWeapon weapon1;
+    IWeapon weapon2;
+    IWeapon specialWeapon;
 
-    Vector3 playerPosition;
+    void Start()
+    {
+        if(weapon1object != null) weapon1 = weapon1object.GetComponent<IWeapon>();
+        if(weapon2object != null) weapon2 = weapon2object.GetComponent<IWeapon>();
+
+        if(specialWeaponObject != null) specialWeapon = specialWeaponObject.GetComponent<IWeapon>();
+    }
 
     public void BasicAttack()
     {

@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float rollSpeedMultiplier = 2;
     public float rollDuration = 1;
     public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
+    public float rollFuelCost = 40f;
 
     [Header("Fuel Settings")]
     public float fuelPerSecond = 2.5f;
@@ -32,8 +33,11 @@ public class PlayerMovement : MonoBehaviour
     bool isTilting;
     bool isSlowingDown;
     bool canBoost;
-    float boostFuel;
+    float currentFuel;
+
     Rigidbody rigidbody;
+    Health health;
+
 
     void Start()
     {
@@ -41,15 +45,17 @@ public class PlayerMovement : MonoBehaviour
         isTilting = false;
         isSlowingDown = false;
         canBoost = false; 
-        boostFuel = MaxFuel;
+        currentFuel = MaxFuel;
+
         rigidbody = GetComponent<Rigidbody>();
+        health = GetComponent<Health>();
     }
 
 
     void Update()
     {
         ApplyPositionLimits();
-        if (boostFuel <= MaxFuel) boostFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
+        if (currentFuel <= MaxFuel) currentFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
     }
 
 
@@ -72,14 +78,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isSlowingDown) return;
 
-        if (boostFuel > 0.0f && canBoost)
+        if (currentFuel > 0.0f && canBoost)
         {
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, forwardSpeed * boostSpeedMultiplier);
-            boostFuel -= boostFuelPerSecond * Time.deltaTime;
+            currentFuel -= boostFuelPerSecond * Time.deltaTime;
         }
-        else if (boostFuel >= 0.2*MaxFuel && !canBoost)
+        else if (currentFuel >= 0.2*MaxFuel && !canBoost)
             canBoost = true;
-        else if (boostFuel <= 0) 
+        else if (currentFuel <= 0) 
             canBoost = false;
     }
 
@@ -97,8 +103,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Roll(Vector2 rollDirection)
     {
-        if (!isRolling)
+        if (!isRolling && currentFuel >= rollFuelCost)
+        {
+            currentFuel -= rollFuelCost;
             StartCoroutine(Rolling(rollDirection));
+        }
+            
     }
 
 
@@ -122,20 +132,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public float getFuel() {
-        return boostFuel;
-    }
+    public float GetCurrentFuel() => currentFuel;
+    public float GetMaxFuel() => MaxFuel;
+
 
     private IEnumerator Rolling(Vector2 rollDirection)
     {
         isRolling = true;
+        if (health != null) health.SetBulletImmunity(true);
+        rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollSpeedMultiplier, rollDirection.y * lateralSpeed * rollSpeedMultiplier, rigidbody.velocity.z);
 
         float timeRolling = 0;
         float turnDirection = rollDirection.x >= 0 ? -1 : 1;
 
-        rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollSpeedMultiplier, rollDirection.y * lateralSpeed * rollSpeedMultiplier, rigidbody.velocity.z);
-
-        while(timeRolling < rollDuration)
+        while (timeRolling < rollDuration)
         {
             float rotationIncrement =  turnDirection * turns * 360 / rollDuration * Time.deltaTime;
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + rotationIncrement);
@@ -143,7 +153,9 @@ public class PlayerMovement : MonoBehaviour
             timeRolling += Time.deltaTime;
             yield return null;
         }
+
         isRolling = false;
+        if (health != null) health.SetBulletImmunity(false);
     }
 
 

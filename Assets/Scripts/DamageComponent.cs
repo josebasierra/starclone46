@@ -6,14 +6,12 @@ public class DamageComponent : MonoBehaviour
 {
     public int damage = 1;
 
+    public float GetDamage() => damage;
 
+    //TODO: Ignore owner impact
     private void OnTriggerEnter(Collider other)
     {
-        string otherTag = other.gameObject.tag;
-        if(otherTag != this.gameObject.tag)
-        {
-            var health = other.gameObject.GetComponent<Health>();
-            if (health != null) health.TakeDamage(damage);
-        }
+        //explosion effect, particles...
+        Destroy(this.gameObject);
     }
 }

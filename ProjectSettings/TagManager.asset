@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyShip1
-  - Obstable
+  - MovingEnemy
+  - Bullet
+  - Static
+  - Pushable
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -6,8 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserWeapon : MonoBehaviour, IWeapon
 {
-
-    //[Range(0, 1)] public float laserWidth;
     public float dps;
     public float range;
     public Transform startPoint;
@@ -15,29 +13,32 @@ public class LaserWeapon : MonoBehaviour, IWeapon
 
     private LineRenderer lineRenderer;
 
+
     public void Activate()
     {
-        throw new System.NotImplementedException();
+        EmitLaser();
     }
+
 
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = true;
 
-        //lineRenderer.startWidth = laserWidth;
-        //lineRenderer.endWidth = laserWidth;
-
-        Vector3 laserDirection = (endPoint.position - startPoint.position).normalized;
+        // laser no visible
         lineRenderer.SetPosition(0, startPoint.position);
-        lineRenderer.SetPosition(1, startPoint.position+ range * laserDirection);
+        lineRenderer.SetPosition(1, startPoint.position);
     }
 
 
-    void Update()
+    //TODO: Ignore owner of the laser, desactive beam when not calling to Activate
+    void EmitLaser()
     {
+        lineRenderer.SetPosition(0, startPoint.position);
         Vector3 laserDirection = (endPoint.position - startPoint.position).normalized;
         RaycastHit hit;
+
+
         if (Physics.Raycast(startPoint.position, laserDirection, out hit, range))
         {
             Health health = hit.transform.GetComponent<Health>();

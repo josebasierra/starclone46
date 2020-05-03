@@ -15,11 +15,12 @@ public class HealthBar : MonoBehaviour
 
 	void Start() {
 		healthComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-		health = healthComponent.GetHealth();
+		health = healthComponent.GetCurrentHealth();
 	}
 
+	//TODO: en funcion de maxHealth, como el boostFuelBar
 	void Update() {
-		health = healthComponent.GetHealth();
+		health = healthComponent.GetCurrentHealth();
 
 		if (health == 100) {
 			slider.maxValue = health;

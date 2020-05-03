@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 2513055597907315854}
   - component: {fileID: 2513055597907315855}
   m_Layer: 0
-  m_Name: WeaponTest
+  m_Name: StandardWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557014b3ff75bf547bb49fed034d4504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.5
+  cooldown: 0.1
   shotSpeed: 100
   ammunition: -1
   prefabBullet: {fileID: 9141982248226275489, guid: 1e4cf25236dd6874fba8296cf8c26e3d,
