@@ -12,22 +12,38 @@ public class LaserWeapon : MonoBehaviour, IWeapon
     public Transform endPoint;
 
     private LineRenderer lineRenderer;
+    private bool isActivated;
 
 
     public void Activate()
     {
-        EmitLaser();
+        isActivated = true;
     }
 
 
     void Start()
     {
+        isActivated = false;
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = true;
 
         // laser no visible
         lineRenderer.SetPosition(0, startPoint.position);
         lineRenderer.SetPosition(1, startPoint.position);
+    }
+
+
+    void LateUpdate()
+    {
+        if (isActivated)
+            EmitLaser();
+        else
+        {
+            lineRenderer.SetPosition(0, startPoint.position);
+            lineRenderer.SetPosition(1, startPoint.position);
+        }
+        isActivated = false;
+
     }
 
 
