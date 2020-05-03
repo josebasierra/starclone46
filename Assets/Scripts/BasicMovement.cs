@@ -13,9 +13,10 @@ public class BasicMovement : MonoBehaviour
     }
 
     
-    public void MoveTo(Vector3 targetPosition)
+    public void MoveTo(GameObject target)
     {
-    	rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, -1f * speed);
+        Vector3 targetPosition = target.transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
     public void LookAt(Vector3 position)
