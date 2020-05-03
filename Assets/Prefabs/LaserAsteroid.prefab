@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1266233891724752107}
   - component: {fileID: 8722106484803642325}
+  - component: {fileID: -7363788222867103710}
+  - component: {fileID: 4622529221082887579}
   m_Layer: 0
   m_Name: LaserAsteroid
   m_TagString: Untagged
@@ -45,6 +47,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60afd7ea28b4fc44281e6f8a70e9a204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7363788222867103710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266233891724752106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92013ede45c1234bbc853cc038ef871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+--- !u!135 &4622529221082887579
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266233891724752106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.21
+  m_Center: {x: 0, y: 0, z: 0.02}
 --- !u!1001 &1266233892062850219
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,9 +13,8 @@ public class BasicMovement : MonoBehaviour
     }
 
     
-    public void MoveTo(GameObject target)
+    public void MoveTo(Vector3 targetPosition)
     {
-        Vector3 targetPosition = target.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 

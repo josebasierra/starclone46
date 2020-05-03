@@ -27,7 +27,8 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             isDead = true;
-            Debug.Log("Estas muerto colega");
+            //temporal:
+            Destroy(this.gameObject);
         }
             
     }

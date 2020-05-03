@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1Controller : MonoBehaviour
+public class Enemy1Behaviour : MonoBehaviour
 {
 	AttackComponent attackComponent;
 	BasicMovement moveComponent;
 	
-	public GameObject targetObject;
+	public Transform target;
 
 	Vector3 playerPosition;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
         moveComponent = this.GetComponent<BasicMovement>();
     }
 
-    // Update is called once per frame
+    //TODO: findPlayer once in start (save its transform)
     void Update()
     {  
     	playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -26,7 +26,7 @@ public class Enemy1Controller : MonoBehaviour
     	if (moveComponent != null)
         {
             moveComponent.LookAt(playerPosition);
-            moveComponent.MoveTo(targetObject); 
+            if (target != null) moveComponent.MoveTo(target.position); 
         }
 
         if (attackComponent != null)

@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretBehiviour : MonoBehaviour
+public class TurretBehaviour : MonoBehaviour
 {
     AttackComponent attackComponent;
     Vector3 playerPosition;
-    GameObject cylinder;
+    Transform cannon;
     
-    // Start is called before the first frame update
+
     void Start()
     {
     	attackComponent = this.GetComponent<AttackComponent>();
-    	cylinder = transform.GetChild(0).gameObject;
+    	cannon = transform.GetChild(0);
     }
 
-    // Update is called once per frame
+    //TODO: call findPlayer only once in start
     void Update()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
@@ -32,6 +32,6 @@ public class TurretBehiviour : MonoBehaviour
     {
     	Vector3 targetPosition = new Vector3(target.x,transform.position.y,target.z); //rotate in Y-axis
     	transform.LookAt(targetPosition);
-    	cylinder.transform.LookAt(targetPosition);
+    	cannon.LookAt(target);
     }
 }

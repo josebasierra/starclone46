@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AttackComponent : MonoBehaviour
 {
-    public GameObject weapon1object; 
-    public GameObject weapon2object;
+    public GameObject weapon1Object; 
+    public GameObject weapon2Object;
     public GameObject specialWeaponObject; //bomb, missile...
 
     IWeapon weapon1;
@@ -14,8 +14,8 @@ public class AttackComponent : MonoBehaviour
 
     void Start()
     {
-        if(weapon1object != null) weapon1 = weapon1object.GetComponent<IWeapon>();
-        if(weapon2object != null) weapon2 = weapon2object.GetComponent<IWeapon>();
+        if(weapon1Object != null) weapon1 = weapon1Object.GetComponent<IWeapon>();
+        if(weapon2Object != null) weapon2 = weapon2Object.GetComponent<IWeapon>();
 
         if(specialWeaponObject != null) specialWeapon = specialWeaponObject.GetComponent<IWeapon>();
     }
