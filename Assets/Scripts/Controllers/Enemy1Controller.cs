@@ -6,6 +6,8 @@ public class Enemy1Controller : MonoBehaviour
 {
 	AttackComponent attackComponent;
 	BasicMovement moveComponent;
+	
+	public GameObject targetObject;
 
 	Vector3 playerPosition;
 
@@ -24,7 +26,7 @@ public class Enemy1Controller : MonoBehaviour
     	if (moveComponent != null)
         {
             moveComponent.LookAt(playerPosition);
-            moveComponent.MoveTo(playerPosition);
+            moveComponent.MoveTo(targetObject); 
         }
 
         if (attackComponent != null)
