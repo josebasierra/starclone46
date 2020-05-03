@@ -8,10 +8,11 @@ public class DamageComponent : MonoBehaviour
 
     public float GetDamage() => damage;
 
-    //TODO: Ignore owner impact
+
     private void OnTriggerEnter(Collider other)
     {
         //explosion effect, particles...
-        Destroy(this.gameObject);
+        if(other.gameObject.tag != this.gameObject.tag)
+            Destroy(this.gameObject);
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2802774751042835835}
   m_Layer: 0
   m_Name: Colliders(6)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6754056943366195960}
   m_Layer: 0
   m_Name: Colliders (2)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 3715175276982093417}
   m_Layer: 0
   m_Name: Colliders (5)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1690435861948470596}
   m_Layer: 0
   m_Name: Colliders (4)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 1961948825673685811}
   m_Layer: 0
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.61
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.19
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
@@ -751,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.55999994
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
@@ -761,7 +761,7 @@ PrefabInstance:
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.19
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
