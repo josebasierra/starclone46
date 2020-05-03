@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
         ApplyPositionLimits();
         if (currentFuel <= MaxFuel) currentFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel

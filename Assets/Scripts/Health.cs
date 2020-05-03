@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage) {
 
-        if (!bulletImmunity) currentHealth -= damage;
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
@@ -40,11 +40,11 @@ public class Health : MonoBehaviour
 
     public void SetBulletImmunity(bool value) => bulletImmunity = value;
 
-
+    // check for bullet impacts (bullet = object with damage component)
     private void OnTriggerEnter(Collider other)
     {
         var damageComponent = other.gameObject.GetComponent<DamageComponent>();
-        if (damageComponent != null)
+        if (damageComponent != null && other.tag != this.tag && !bulletImmunity)
         {
             TakeDamage(damageComponent.GetDamage());
         }
