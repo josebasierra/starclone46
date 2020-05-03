@@ -12,27 +12,23 @@ public class HealthBar : MonoBehaviour
 
 	Health healthComponent;
 	float health;
+	float maxHealth;
 
 	void Start() {
 		healthComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-		health = healthComponent.GetCurrentHealth();
+		
+		slider.maxValue = 1.0f;
+		maxHealth = healthComponent.GetMaxHealth();
+		fill.color = gradient.Evaluate(1f);
 	}
 
-	//TODO: en funcion de maxHealth, como el boostFuelBar
 	void Update() {
-		health = healthComponent.GetCurrentHealth();
+		float health = healthComponent.GetCurrentHealth();
 
-		if (health == 100) {
-			slider.maxValue = health;
-			slider.value = health;
+		slider.value = health/maxHealth;
+		Debug.Log(slider.value);
 
-			fill.color = gradient.Evaluate(1f);
-		}
-
-		else {
-			slider.value = health;
-
-			fill.color = gradient.Evaluate(slider.normalizedValue);
-		}
+		fill.color = gradient.Evaluate(slider.normalizedValue);
+		
 	}
 }
