@@ -6,11 +6,13 @@ public class TurretBehiviour : MonoBehaviour
 {
     AttackComponent attackComponent;
     Vector3 playerPosition;
+    GameObject cylinder;
     
     // Start is called before the first frame update
     void Start()
     {
     	attackComponent = this.GetComponent<AttackComponent>();
+    	cylinder = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -30,5 +32,6 @@ public class TurretBehiviour : MonoBehaviour
     {
     	Vector3 targetPosition = new Vector3(target.x,transform.position.y,target.z); //rotate in Y-axis
     	transform.LookAt(targetPosition);
+    	cylinder.transform.LookAt(targetPosition);
     }
 }
