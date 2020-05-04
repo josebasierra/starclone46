@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dps: 200
   range: 100
+  energyCostPerSecond: 20
   startPoint: {fileID: 7458558572742388256}
   endPoint: {fileID: 7458558572072138671}
 --- !u!120 &7458558573074832801

@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 3447441065435424463}
   - component: {fileID: 181546747565865559}
   - component: {fileID: 551498785789589020}
+  - component: {fileID: 7886598512490049596}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -285,15 +286,13 @@ MonoBehaviour:
   rotationSpeed: 140
   positionLimits: {x: 10, y: 6}
   boostSpeedMultiplier: 2
-  boostFuelPerSecond: 20
+  boostEnergyPerSecond: 20
   slowForwardMultiplier: 0.5
   slowLateralMultiplier: 0.2
   rollSpeedMultiplier: 1.2
   rollDuration: 0.45
   turns: 1.1
-  rollFuelCost: 40
-  fuelPerSecond: 5
-  MaxFuel: 100
+  rollEnergyCost: 40
 --- !u!114 &3447441065435424463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +339,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &7886598512490049596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779893915376304141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a61b2ba3ea5d143bd382cf32415398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 100
+  energyPerSecond: 5
+  cooldownThreshold: 0.4
 --- !u!1 &7480862549255534934
 GameObject:
   m_ObjectHideFlags: 0

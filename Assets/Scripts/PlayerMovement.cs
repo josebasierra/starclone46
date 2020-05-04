@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Energy))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Move Settings")]
@@ -13,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Boost Settings")]
     public float boostSpeedMultiplier = 2f;
-    public float boostFuelPerSecond = 10.5f;
+    public float boostEnergyPerSecond = 10.5f;
 
     [Header("SlowDown Settings")]
     public float slowForwardMultiplier = 0.5f;
@@ -23,39 +24,32 @@ public class PlayerMovement : MonoBehaviour
     public float rollSpeedMultiplier = 2;
     public float rollDuration = 1;
     public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
-    public float rollFuelCost = 40f;
+    public float rollEnergyCost = 40f;
 
-    [Header("Fuel Settings")]
-    public float fuelPerSecond = 2.5f;
-    public float MaxFuel = 10.0f;
 
     bool isRolling;
     bool isTilting;
     bool isSlowingDown;
-    bool canBoost;
-    float currentFuel;
 
     Rigidbody rigidbody;
     Health health;
-
+    Energy energy;
 
     void Start()
     {
         isRolling = false;
         isTilting = false;
         isSlowingDown = false;
-        canBoost = false; 
-        currentFuel = MaxFuel;
 
         rigidbody = GetComponent<Rigidbody>();
         health = GetComponent<Health>();
+        energy = GetComponent<Energy>();
     }
 
 
     void LateUpdate()
     {
         ApplyPositionLimits();
-        if (currentFuel <= MaxFuel) currentFuel += fuelPerSecond * Time.deltaTime; //se va aumentando el fuel
     }
 
 
@@ -78,15 +72,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isSlowingDown) return;
 
-        if (currentFuel > 0.0f && canBoost)
-        {
+        if (energy.Consume(boostEnergyPerSecond*Time.deltaTime))
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, forwardSpeed * boostSpeedMultiplier);
-            currentFuel -= boostFuelPerSecond * Time.deltaTime;
-        }
-        else if (currentFuel >= 0.2*MaxFuel && !canBoost)
-            canBoost = true;
-        else if (currentFuel <= 0) 
-            canBoost = false;
     }
 
 
@@ -96,19 +83,17 @@ public class PlayerMovement : MonoBehaviour
         rigidbody.velocity = new Vector3(rigidbody.velocity.x * slowLateralMultiplier, rigidbody.velocity.y * slowLateralMultiplier,  forwardSpeed * slowForwardMultiplier);
     }
 
+
     public void StopSlowingDown()
     {
         isSlowingDown = false;
     }
 
+
     public void Roll(Vector2 rollDirection)
     {
-        if (!isRolling && currentFuel >= rollFuelCost)
-        {
-            currentFuel -= rollFuelCost;
-            StartCoroutine(Rolling(rollDirection));
-        }
-            
+        if (!isRolling && energy.Consume(rollEnergyCost))
+            StartCoroutine(Rolling(rollDirection));      
     }
 
 
@@ -130,10 +115,6 @@ public class PlayerMovement : MonoBehaviour
         var rotation = Quaternion.LookRotation(position - transform.position).eulerAngles;
         transform.rotation = Quaternion.Euler(rotation.x, rotation.y, transform.eulerAngles.z);
     }
-
-
-    public float GetCurrentFuel() => currentFuel;
-    public float GetMaxFuel() => MaxFuel;
 
 
     private IEnumerator Rolling(Vector2 rollDirection)

@@ -8,12 +8,14 @@ public class LaserWeapon : MonoBehaviour, IWeapon
 {
     public float dps;
     public float range;
+    public float energyCostPerSecond;
     public Transform startPoint;
     public Transform endPoint;
 
-    private LineRenderer lineRenderer;
-    private bool isActivated;
-
+    LineRenderer lineRenderer;
+    bool isActivated;
+    string ownerTag;
+    Energy energy;
 
     public void Activate()
     {
@@ -23,6 +25,9 @@ public class LaserWeapon : MonoBehaviour, IWeapon
 
     void Start()
     {
+        ownerTag = this.transform.parent.tag;
+        energy = GetComponentInParent<Energy>();
+
         isActivated = false;
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = true;
@@ -35,8 +40,11 @@ public class LaserWeapon : MonoBehaviour, IWeapon
 
     void LateUpdate()
     {
-        if (isActivated)
+        if (isActivated && (energy == null || energy.Consume(energyCostPerSecond * Time.deltaTime) ) )
+        {
             EmitLaser();
+        }
+            
         else
         {
             lineRenderer.SetPosition(0, startPoint.position);
@@ -58,9 +66,8 @@ public class LaserWeapon : MonoBehaviour, IWeapon
         if (Physics.Raycast(startPoint.position, laserDirection, out hit, range))
         {
             Health health = hit.transform.GetComponent<Health>();
-            if (health != null)
+            if (health != null && hit.transform.tag != ownerTag)
             {
-                Debug.Log("Laser damage!");
                 health.TakeDamage(dps * Time.deltaTime);
             }
             lineRenderer.SetPosition(1, hit.point);

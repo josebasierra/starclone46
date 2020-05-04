@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4643821204278609503}
   m_Layer: 0
   m_Name: body
-  m_TagString: Static
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7905612043217080967}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Static
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4643821205187657545}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Static
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 3654822379669685507}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Static
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
