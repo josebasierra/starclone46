@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 10.0f;
+    public float maxHealth = 20.0f;
+    public float healHealth = 10.0f;
     //escudo y mas...
 
     float currentHealth;
@@ -29,8 +30,11 @@ public class Health : MonoBehaviour
             isDead = true;
             //temporal:
             Destroy(this.gameObject);
-        }
-            
+        }      
+    }
+
+    public void heal() {
+        currentHealth += healHealth;
     }
 
     public float GetCurrentHealth() => currentHealth;

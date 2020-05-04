@@ -10,18 +10,20 @@ public class Enemy1Behaviour : MonoBehaviour
 	public Transform target;
 
 	Vector3 playerPosition;
+    Transform transformPlayer;
 
 
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
         moveComponent = this.GetComponent<BasicMovement>();
+        transformPlayer = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     //TODO: findPlayer once in start (save its transform)
     void Update()
     {  
-    	playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+    	if (transformPlayer != null) playerPosition = transformPlayer.position;
     	
     	if (moveComponent != null)
         {

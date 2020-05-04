@@ -7,21 +7,26 @@ public class TurretBehaviour : MonoBehaviour
     AttackComponent attackComponent;
     Vector3 playerPosition;
     Transform cannon;
+
+    Transform transformPlayer;
     
 
     void Start()
     {
     	attackComponent = this.GetComponent<AttackComponent>();
     	cannon = transform.GetChild(0);
+        transformPlayer = GameObject.FindGameObjectWithTag("Player").transform; 
     }
-
+    
     //TODO: call findPlayer only once in start
     void Update()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        if (transformPlayer != null) 
+        {
+            playerPosition = transformPlayer.position;
+            LookAt(playerPosition);
+        } 
 		
-		LookAt(playerPosition);
-
 		if (attackComponent != null)
         {
             attackComponent.BasicAttack();
