@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     PlayerMovement moveComponent;
     Crosshair aimComponent;
     AttackComponent attackComponent;
+    Health health;
+    Energy energy;
 
     float doubleTapTime;
     float timeSinceLastTap_W;
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour
         moveComponent = this.GetComponent<PlayerMovement>();
         aimComponent = this.GetComponent<Crosshair>();
         attackComponent = this.GetComponent<AttackComponent>();
+        health = GetComponent<Health>();
+        energy = GetComponent<Energy>();
 
         doubleTapTime = 1f;
         timeSinceLastTap_W = doubleTapTime;
@@ -119,11 +123,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Ship Collision");
-
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "HealthSupply") {
+            health.heal();
+            Destroy(other.gameObject);
+        }
+        
+        if (other.gameObject.tag == "EnergySupply") {
+            energy.recharge();
+            Destroy(other.gameObject);
+        }
     }
-
-
 }
