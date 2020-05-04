@@ -6034,6 +6034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 4643821204883311698, guid: 1f78612eec62b0549bbc31e30232f892,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f78612eec62b0549bbc31e30232f892, type: 3}
 --- !u!1 &2027050611
@@ -6899,6 +6904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShip1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566997928366114749, guid: 441fcb039ea9e9a40b80bb48aa99a65e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4566997928366114750, guid: 441fcb039ea9e9a40b80bb48aa99a65e,
         type: 3}

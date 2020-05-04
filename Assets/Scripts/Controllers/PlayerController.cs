@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         Vector3 objective = Vector3.zero;
 
 
-        if (aimComponent != null)
+        if (aimComponent != null && aimComponent.enabled)
         {
             objective = aimComponent.GetAimPosition();
             moveDirection = (objective - transform.position).normalized;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             moveDirection.y *= 2f;
         }
 
-        if (moveComponent != null)
+        if (moveComponent != null && moveComponent.enabled)
         {
             moveComponent.Move(moveDirection);
             moveComponent.LookAt(objective);
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
             timeSinceLastTap_D += Time.deltaTime;
         }
 
-        if (attackComponent != null)
+        if (attackComponent != null && attackComponent.enabled)
         {
             if (Input.GetButton("Fire1"))
             {

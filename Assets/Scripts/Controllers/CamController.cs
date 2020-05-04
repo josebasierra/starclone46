@@ -15,6 +15,7 @@ public class CamController : MonoBehaviour
     void FixedUpdate()
     {
         if (player == null) FindPlayer();
+        if (player == null) return;
 
         Vector3 targetPosition = new Vector3(0f, 0f, player.position.z - distanceToPlayer);
         //transform.position = targetPosition;
@@ -34,7 +35,9 @@ public class CamController : MonoBehaviour
 
     void FindPlayer()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        var playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+            player = playerObject.transform;
     }
 
     float CorrectedAngle(float angle) {

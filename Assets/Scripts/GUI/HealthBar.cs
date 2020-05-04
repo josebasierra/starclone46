@@ -11,7 +11,6 @@ public class HealthBar : MonoBehaviour
 	public Image fill;
 
 	Health healthComponent;
-	float health;
 	float maxHealth;
 
 	void Start() {
@@ -26,7 +25,6 @@ public class HealthBar : MonoBehaviour
 		float health = healthComponent.GetCurrentHealth();
 
 		slider.value = health/maxHealth;
-		Debug.Log(slider.value);
 
 		fill.color = gradient.Evaluate(slider.normalizedValue);
 		
