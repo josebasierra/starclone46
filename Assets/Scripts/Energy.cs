@@ -6,6 +6,7 @@ public class Energy : MonoBehaviour
 {
     public float maxEnergy;
     public float energyPerSecond;
+    public float rechargeEnergy = 20f;
     [Range(0,1)] public float cooldownThreshold;
 
     float currentEnergy;
@@ -24,6 +25,10 @@ public class Energy : MonoBehaviour
             currentEnergy -= value;
             return true;
         }
+    }
+
+    public void recharge() {
+    	currentEnergy += rechargeEnergy;
     }
 
 
