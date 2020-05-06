@@ -4,46 +4,59 @@ using UnityEngine;
 
 public class FormationMemberController : MonoBehaviour
 {
+    public float detectionRange = 100;
+
     Formation formation;
-    Transform aimTarget;
+    Transform player;
 
     AttackComponent attackComponent;
     BasicMovement moveComponent;
 
 
-
     void Start()
     {
         formation = GameObject.Find("Formation").GetComponent<Formation>();
-        aimTarget = GameObject.Find("PlayerShip").transform;
+        player = GameObject.Find("PlayerShip").transform;
 
         attackComponent = GetComponent<AttackComponent>();
         moveComponent = GetComponent<BasicMovement>();
 
         GetComponent<Health>().OnDeath += OnDeath;
-
+        formation.OnFormationAttack += OnFormationAttack;
     }
 
-    //fixed update to avoid laggy movement (look for alternatives)
+    //FixedUpdate to avoid laggy movement (look for alternatives)
     void FixedUpdate()
     {
+        if (player == null) return;
+        if (Mathf.Abs(player.position.z - transform.position.z) >= detectionRange) return;
+
         formation.AddMember(transform);
 
-        moveComponent.LookAt(aimTarget.position);
-
-        var moveTarget = formation.GetTargetPosition(transform);
-        if (moveTarget != null)  moveComponent.MoveTo(moveTarget.position);
-
-        if (attackComponent != null) attackComponent.BasicAttack();
+        if (moveComponent != null)
+        {
+            var moveTarget = formation.GetTargetPosition(transform);
+            if (moveTarget != null) moveComponent.MoveTo(moveTarget.position);
+            moveComponent.LookAt(player.position);
+        }
     }
+
+
+    void OnFormationAttack()
+    {
+        attackComponent?.BasicAttack();
+    }
+
 
     void OnDeath()
     {
         formation.DeleteMember(transform);
     }
 
+
     void OnDisable()
     {
         GetComponent<Health>().OnDeath -= OnDeath;
+        formation.OnFormationAttack -= OnFormationAttack;
     }
 }

@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 
 // TODO: improve shit code
 public class Formation : MonoBehaviour
 {
-    public float distance = 20f;
-    public int size = 4;
+    public float distanceToPlayer = 20f;
     public float distanceBetweenMembers = 4f;
+    public int formationLayers = 4;
+
+    public float rotationSpeed = 5f;
+    public float timeBetweenAttacks = 2f; 
 
     Dictionary<Transform, Transform> memberToFormationTarget;
     Dictionary<Transform, bool> targetOccupied;
-
     Transform player;
+
+    public event Action OnFormationAttack;
+    float timeSinceLastAttack = 0f;
 
 
     public void AddMember(Transform member)
@@ -54,15 +59,24 @@ public class Formation : MonoBehaviour
     void Update()
     {
         if (player == null) return;
-        transform.position = new Vector3(0, 0, player.position.z + distance);
+        transform.position = new Vector3(0, 0, player.position.z + distanceToPlayer);
 
         List<Transform> members = new List<Transform>();
+
         foreach (var member in memberToFormationTarget.Keys)
             members.Add(member);
 
         foreach (var member in members)
-        {
             UpdateMemberTarget(member);
+       
+        transform.Rotate(new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
+
+
+        timeSinceLastAttack += Time.deltaTime;
+        if (timeSinceLastAttack >= timeBetweenAttacks)
+        {
+            OnFormationAttack?.Invoke();
+            timeSinceLastAttack = 0f;
         }
     }
 
@@ -72,14 +86,14 @@ public class Formation : MonoBehaviour
         var currentTarget = memberToFormationTarget.ContainsKey(member) ? memberToFormationTarget[member] : null;
 
         Transform bestTarget = currentTarget;
-        float bestDistanceToCenter = (bestTarget == null) ? float.MaxValue : Vector3.Distance(bestTarget.position, transform.position);
+        float bestDistanceToCenter = (bestTarget == null) ? float.MaxValue : bestTarget.localPosition.magnitude;
 
         foreach (var valueKey in targetOccupied)
         {
             Transform target = valueKey.Key;
             bool occupied = valueKey.Value;
 
-            float distance = Vector3.Distance(target.position, transform.position);
+            float distance = target.localPosition.magnitude;
             if (distance < bestDistanceToCenter && !occupied)
             {
                 bestTarget = target;
@@ -98,7 +112,7 @@ public class Formation : MonoBehaviour
         childTransformInit.localPosition = new Vector3(0, 0, 0);
         targetOccupied.Add(childTransformInit, false);
 
-        for (int i = 1; i <= size; i++)
+        for (int i = 1; i <= formationLayers; i++)
         {
             for (int x = -1; x <= 1; x++)
             {

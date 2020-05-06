@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa23171a082a1246b578b41782413d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 20
-  size: 8
+  distanceToPlayer: 30
   distanceBetweenMembers: 6
+  formationLayers: 6
+  rotationSpeed: 45
+  timeBetweenAttacks: 2
