@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "HealthSupply") {
             health.heal();
             Destroy(other.gameObject);

@@ -3352,7 +3352,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156879154}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2
@@ -6905,6 +6905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EnergySupply
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598045757755260283, guid: ff801dc2de0767244a28b8e5082129a1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2598045757755260284, guid: ff801dc2de0767244a28b8e5082129a1,
         type: 3}
