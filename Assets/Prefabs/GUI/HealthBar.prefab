@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 288022217008800858}
   - component: {fileID: 288022218362060038}
   m_Layer: 5
-  m_Name: Health bar
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b813d1b6da71ce418ad87b5a0cd6f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 288022217008800858}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -131,7 +130,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  fill: {fileID: 288022218184107589}
 --- !u!1 &288022217907085475
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +269,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

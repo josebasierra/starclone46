@@ -5,28 +5,23 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
-	public Slider slider;
 	public Gradient gradient;
-	public Image fill;
 
-	Health healthComponent;
-	float maxHealth;
+	Slider slider;
+	Image image;
+	Health health;
 
-	void Start() {
-		healthComponent = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-		
-		slider.maxValue = 1.0f;
-		maxHealth = healthComponent.GetMaxHealth();
-		fill.color = gradient.Evaluate(1f);
+	void Start()
+	{
+		slider = GetComponent<Slider>();
+		image = GetComponentInChildren<Image>();
+		health = GameObject.Find("PlayerShip").GetComponent<Health>(); ;
+		slider.maxValue = 1f;
 	}
 
-	void Update() {
-		float health = healthComponent.GetCurrentHealth();
-
-		slider.value = health/maxHealth;
-
-		fill.color = gradient.Evaluate(slider.normalizedValue);
-		
+	void Update() 
+	{
+		slider.value = health.GetCurrentHealth() / health.GetMaxHealth();
+		image.color = gradient.Evaluate(slider.normalizedValue);
 	}
 }

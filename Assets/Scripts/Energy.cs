@@ -43,7 +43,11 @@ public class Energy : MonoBehaviour
         currentEnergy += energyPerSecond * Time.deltaTime;
         currentEnergy = Mathf.Min(currentEnergy, maxEnergy);
 
-        if (currentEnergy >= cooldownThreshold * maxEnergy) onCooldown = false;
-        else if (currentEnergy <= 0) onCooldown = true;
+        if (currentEnergy >= cooldownThreshold * maxEnergy) { onCooldown = false; }
+        else if (currentEnergy <= 0)
+        {
+            onCooldown = true;
+            currentEnergy = 0f;
+        }
     }
 }

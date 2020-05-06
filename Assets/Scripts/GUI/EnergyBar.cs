@@ -5,23 +5,26 @@ using UnityEngine.UI;
 
 public class EnergyBar : MonoBehaviour
 {
-    public Slider slider;
-	public Image fill;
+	public Gradient gradient;
 
+	Slider slider;
+	Image image;
 	Energy energy;
+	Color originalColor;
 
-
-	void Start() {
-		energy = GameObject.FindGameObjectWithTag("Player").GetComponent<Energy>();
-		slider.maxValue = 1.0f;
+	void Start()
+	{
+		slider = GetComponent<Slider>();
+		image = GetComponentInChildren<Image>();
+		energy = GameObject.Find("PlayerShip").GetComponent<Energy>();
+		slider.maxValue = 1f;
+		originalColor = image.color;
 	}
 
-
-	void Update() {
-		float currentFuel = energy.GetCurrentEnergy();
-		float maxFuel = energy.GetMaxEnergy();
-
-		slider.value = currentFuel / maxFuel;
+	void Update()
+	{
+		slider.value = energy.GetCurrentEnergy() / energy.GetMaxEnergy();
+		image.color = energy.isOnCooldown() ? Color.red : originalColor;
 	}
 }
 
