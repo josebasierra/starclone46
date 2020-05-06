@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -8110890717667326976}
   - component: {fileID: 4566997928366114722}
   m_Layer: 0
-  m_Name: EnemyShip1
+  m_Name: Bolse
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  healHealth: 10
 --- !u!135 &4566997928366114722
 SphereCollider:
   m_ObjectHideFlags: 0

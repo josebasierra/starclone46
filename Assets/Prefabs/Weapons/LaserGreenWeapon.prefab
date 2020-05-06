@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7458558572072138672
+--- !u!1 &7891352000686178511
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7458558572072138671}
+  - component: {fileID: 7891352000686178512}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
@@ -16,21 +16,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7458558572072138671
+--- !u!4 &7891352000686178512
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7458558572072138672}
+  m_GameObject: {fileID: 7891352000686178511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7458558573074832862}
+  m_Father: {fileID: 7891352001285188257}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7458558572742388257
+--- !u!1 &7891352001089051998
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7458558572742388256}
+  - component: {fileID: 7891352001089051999}
   m_Layer: 0
   m_Name: StartPoint
   m_TagString: Untagged
@@ -46,21 +46,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7458558572742388256
+--- !u!4 &7891352001089051999
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7458558572742388257}
+  m_GameObject: {fileID: 7891352001089051998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7458558573074832862}
+  m_Father: {fileID: 7891352001285188257}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7458558573074832800
+--- !u!1 &7891352001285188319
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,39 +68,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7458558573074832862}
-  - component: {fileID: 7458558573074832802}
-  - component: {fileID: 7458558573074832801}
+  - component: {fileID: 7891352001285188257}
+  - component: {fileID: 7891352001285188317}
+  - component: {fileID: 7891352001285188318}
   m_Layer: 0
-  m_Name: LaserWeapon
+  m_Name: LaserGreenWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7458558573074832862
+--- !u!4 &7891352001285188257
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7458558573074832800}
+  m_GameObject: {fileID: 7891352001285188319}
   m_LocalRotation: {x: -0, y: -0, z: 8.4299e-17, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.36, z: 3}
+  m_LocalPosition: {x: 0.05, y: 0.95, z: 0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7458558572742388256}
-  - {fileID: 7458558572072138671}
+  - {fileID: 7891352001089051999}
+  - {fileID: 7891352000686178512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7458558573074832802
+--- !u!114 &7891352001285188317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7458558573074832800}
+  m_GameObject: {fileID: 7891352001285188319}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3024796c2abe4e438c1850cf53fdaa4, type: 3}
@@ -109,15 +109,15 @@ MonoBehaviour:
   dps: 200
   range: 100
   energyCostPerSecond: 20
-  startPoint: {fileID: 7458558572742388256}
-  endPoint: {fileID: 7458558572072138671}
---- !u!120 &7458558573074832801
+  startPoint: {fileID: 7891352001089051999}
+  endPoint: {fileID: 7891352000686178512}
+--- !u!120 &7891352001285188318
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7458558573074832800}
+  m_GameObject: {fileID: 7891352001285188319}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -129,7 +129,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10dd94f3502c29b4abaa08aa98afad67, type: 2}
+  - {fileID: 2100000, guid: 901871ce80ee5884eb89bfb5a5e4911f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!135 &7518967062426037103
-SphereCollider:
+--- !u!64 &6809466816602623771
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,9 +10,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 150
-  m_Center: {x: -1.7975006, y: 0, z: 7.072998}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2553964747767377435, guid: 6a2782fa9e6e76c499ee4d1993188bad, type: 3}
 --- !u!1 &7518967062632877127
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa739a23d219e64a96ff9b69b8bb481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: {x: 20, y: 20, z: 20}
 --- !u!1001 &7518967061578948964
 PrefabInstance:
   m_ObjectHideFlags: 0
