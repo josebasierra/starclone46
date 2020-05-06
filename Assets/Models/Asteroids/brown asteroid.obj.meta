@@ -3,7 +3,13 @@ guid: f40a4014cdc0c9a40bc96679d01a8f22
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brownMat
+    second: {fileID: -2609809028551464901, guid: 9e6542b8eacb8b64baad1c285e4b541e,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
