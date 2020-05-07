@@ -450,6 +450,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &192570017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 192570017, guid: 0653147bee0c834429ff1576316f5436,
+    type: 3}
+  m_PrefabInstance: {fileID: 279120702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &205041416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,11 +903,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3441033422101478925, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3441033422475543651, guid: 0653147bee0c834429ff1576316f5436,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1207,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75a1ebdc03f59a4f866754e5a1181ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 192570017}
 --- !u!4 &329693548
 Transform:
   m_ObjectHideFlags: 0
@@ -1506,37 +1508,6 @@ Transform:
   m_Father: {fileID: 1186068134}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &433345832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 433345832, guid: 0653147bee0c834429ff1576316f5436,
-    type: 3}
-  m_PrefabInstance: {fileID: 279120702}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &433345834 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 433345834, guid: 0653147bee0c834429ff1576316f5436,
-    type: 3}
-  m_PrefabInstance: {fileID: 279120702}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433345832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &433345836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433345832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430e36952dd87cf4ab61da909f45bd1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 433345834}
 --- !u!1 &531268344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5233,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 181546747565865559, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 627824234621983618, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: fuelPerSecond
