@@ -9,11 +9,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int score = 0;
 
-
     public void AddScore(int points)
     {
         score += points;
     }
+
+    public int getScore() => score;
 
 
     public static void LoadLevel(int level)
@@ -43,6 +44,4 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-
 }

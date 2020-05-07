@@ -33,7 +33,7 @@ public class Enemy1Behaviour : MonoBehaviour
 
         if (attackComponent != null)
         {
-            attackComponent.BasicAttack();
+            if (transform.position.z > playerPosition.z) attackComponent.BasicAttack();
         }
     }
 

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ScorePoints : MonoBehaviour
 {
     public int points = 25;
     Health health;
-    
 
     void Start()
     {
@@ -15,12 +15,10 @@ public class ScorePoints : MonoBehaviour
         if (health != null) health.OnDeath += OnDeath;
     }
 
-
     void OnDisable()
     {
         if (health != null) health.OnDeath += OnDeath;
     }
-
 
     void OnDeath()
     {

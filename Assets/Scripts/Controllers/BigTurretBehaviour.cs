@@ -29,10 +29,12 @@ public class BigTurretBehaviour : MonoBehaviour
 		
 		if (attackComponent != null)
         {
-            if (Mathf.Abs(transform.position.z-playerPosition.z) <= 100) {
-                attackComponent.SpecialAttack();
-            }
-            else attackComponent.BasicAttack();
+            if (transform.position.z > playerPosition.z) {
+                if (Mathf.Abs(transform.position.z-playerPosition.z) <= 100) {
+                    attackComponent.SpecialAttack();
+                }
+                else attackComponent.BasicAttack();
+            } 
         }
 
     }

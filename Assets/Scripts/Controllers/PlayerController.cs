@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         timeSinceLastTap_A = doubleTapTime;
         timeSinceLastTap_D = doubleTapTime;
 
-        pauseManager = GameObject.Find("PauseManager").GetComponent<PauseManager>();
+        if (pauseManager != null) pauseManager = GameObject.Find("PauseManager").GetComponent<PauseManager>();
     }
 
 
