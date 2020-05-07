@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastTap_A;
     float timeSinceLastTap_D;
 
+    PauseManager pauseManager;
+
     void Start()
     {
         moveComponent = this.GetComponent<PlayerMovement>();
@@ -29,11 +31,15 @@ public class PlayerController : MonoBehaviour
         timeSinceLastTap_S = doubleTapTime;
         timeSinceLastTap_A = doubleTapTime;
         timeSinceLastTap_D = doubleTapTime;
+
+        pauseManager = GameObject.Find("PauseManager").GetComponent<PauseManager>();
     }
 
 
     void Update()
     {
+        if (pauseManager != null && pauseManager.IsPaused()) return;
+
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 1);
         Vector3 objective = Vector3.zero;
 
