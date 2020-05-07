@@ -125,12 +125,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "HealthSupply") {
-            health.heal();
+            health.Heal();
             Destroy(other.gameObject);
         }
         
         if (other.gameObject.tag == "EnergySupply") {
-            energy.recharge();
+            energy.Recharge();
             Destroy(other.gameObject);
         }
     }

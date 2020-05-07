@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         }      
     }
 
-    public void heal() {
+    public void Heal() {
         currentHealth += healHealth;
     }
 

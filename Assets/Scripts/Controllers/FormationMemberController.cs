@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FormationMemberController : MonoBehaviour
 {
     public float detectionRange = 100;
@@ -11,7 +12,7 @@ public class FormationMemberController : MonoBehaviour
 
     AttackComponent attackComponent;
     BasicMovement moveComponent;
-
+    Health health;
 
     void Start()
     {
@@ -20,8 +21,9 @@ public class FormationMemberController : MonoBehaviour
 
         attackComponent = GetComponent<AttackComponent>();
         moveComponent = GetComponent<BasicMovement>();
+        health = GetComponent<Health>();
 
-        GetComponent<Health>().OnDeath += OnDeath;
+        if (health != null) health.OnDeath += OnDeath;
         formation.OnFormationAttack += OnFormationAttack;
     }
 
@@ -30,6 +32,7 @@ public class FormationMemberController : MonoBehaviour
     {
         if (player == null) return;
         if (Mathf.Abs(player.position.z - transform.position.z) >= detectionRange) return;
+
 
         formation.AddMember(transform);
 
@@ -56,7 +59,7 @@ public class FormationMemberController : MonoBehaviour
 
     void OnDisable()
     {
-        GetComponent<Health>().OnDeath -= OnDeath;
+        if (health != null) health.OnDeath -= OnDeath;
         formation.OnFormationAttack -= OnFormationAttack;
     }
 }

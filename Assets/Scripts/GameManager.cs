@@ -5,24 +5,45 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    
+    public static GameManager instance;
 
-    public void LoadLevel(int level)
+    public int score = 0;
+
+
+    public void AddScore(int points)
     {
-        SceneManager.LoadScene(level);
+        score += points;
     }
 
 
-    public void CloseGame()
+    public static void LoadLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+        instance.score = 0;
+    }
+
+
+    public static void CloseGame()
     {
         //ignored inside editor
         Application.Quit();
     }
 
 
-    private void Awake()
+    void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //singleton
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-  
+
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5024235940868023659}
   - component: {fileID: 2136043030906939304}
   - component: {fileID: 1460512682186452454}
+  - component: {fileID: 5906620000945269945}
   - component: {fileID: 4467401523819962373}
   m_Layer: 0
   m_Name: Butterfly
@@ -92,6 +93,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   healHealth: 10
+--- !u!114 &5906620000945269945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6883605356667898465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5d21a49071cfe489ad87446caf1b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 25
 --- !u!135 &4467401523819962373
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.027
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 6958b63508c96e74bac1a174560b8adf,
         type: 3}

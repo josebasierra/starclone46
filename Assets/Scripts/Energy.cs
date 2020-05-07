@@ -27,7 +27,7 @@ public class Energy : MonoBehaviour
         }
     }
 
-    public void recharge() {
+    public void Recharge() {
     	currentEnergy += rechargeEnergy;
     }
 
