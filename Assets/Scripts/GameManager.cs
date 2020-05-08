@@ -17,14 +17,14 @@ public class GameManager : MonoBehaviour
     public int getScore() => score;
 
 
-    public static void LoadLevel(int level)
+    public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
         instance.score = 0;
     }
 
 
-    public static void CloseGame()
+    public void CloseGame()
     {
         //ignored inside editor
         Application.Quit();
