@@ -14,17 +14,23 @@ public class PauseManager : MonoBehaviour
 
     void Start() 
     {
-        player = GameObject.FindGameObjectWithTag("Player"); //para desactivar el script "Crosshair"
+        player = GameObject.Find("PlayerShip"); 
     }
 
     void Update()
     {
         if (Input.GetKeyDown("escape"))
         {
-            if (isPaused) Resume(); 
-            else Pause();
-
-            isPaused = !isPaused;
+            if (isPaused)
+            {
+                Resume();
+                isPaused = false;
+            }
+            else 
+            {
+                Pause();
+                isPaused = true;
+            }
         }
 
     }
@@ -33,13 +39,13 @@ public class PauseManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        player.GetComponent<Crosshair>().enabled = true;
+        if (player != null) player.GetComponent<PlayerController>().enabled = true;
     }
 
     void Pause() 
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
-        player.GetComponent<Crosshair>().enabled = false;
+        if (player != null) player.GetComponent<PlayerController>().enabled = false;
     }
 }
