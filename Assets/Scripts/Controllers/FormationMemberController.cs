@@ -47,7 +47,7 @@ public class FormationMemberController : MonoBehaviour
 
     void OnFormationAttack()
     {
-        attackComponent?.BasicAttack();
+        if (formation.IsOnPosition(transform)) attackComponent?.BasicAttack();
     }
 
 

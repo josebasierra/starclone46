@@ -39,6 +39,18 @@ public class Formation : MonoBehaviour
     }
 
 
+    public bool IsOnPosition(Transform member)
+    {
+        const float offset = 10f;
+        if (memberToFormationTarget.ContainsKey(member))
+        {
+            var target = memberToFormationTarget[member];
+            if (target != null) return Vector3.Distance(target.position, member.position) < offset;
+        }
+        return false;
+    }
+
+
     public Transform GetTargetPosition(Transform member)
     {
         return memberToFormationTarget[member];
