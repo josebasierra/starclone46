@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class RifleWeapon : MonoBehaviour, IWeapon
 {
     public float cooldown = 0.5f;
@@ -12,7 +13,17 @@ public class RifleWeapon : MonoBehaviour, IWeapon
     public Transform releasePoint;
     public Transform endPoint;
 
+
+    public AudioClip sound;
+
+
     float timeWithoutActivating = 0f;
+    AudioSource source;
+
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
 
     void Update()
@@ -37,6 +48,8 @@ public class RifleWeapon : MonoBehaviour, IWeapon
         bulletTransform.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
 
         Destroy(bulletTransform.gameObject, 6);    //destroy bullet after N seconds
+
+        if (source != null) source.PlayOneShot(sound, 0.1f);
     }
 
 }

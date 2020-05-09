@@ -570,6 +570,7 @@ MonoBehaviour:
     type: 3}
   releasePoint: {fileID: 5241665977030765719}
   endPoint: {fileID: 5241665977308023243}
+  sound: {fileID: 0}
 --- !u!1 &5241665977506924255
 GameObject:
   m_ObjectHideFlags: 0

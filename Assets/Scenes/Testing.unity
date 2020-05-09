@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
 --- !u!1001 &239780778
@@ -389,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Butterfly (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
@@ -853,6 +863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
 --- !u!1001 &778900732
@@ -866,6 +881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHealth
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 551498785789589020, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
@@ -1243,6 +1263,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
 --- !u!1001 &1260492892
@@ -1549,6 +1574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
 --- !u!1001 &1499612489
@@ -1701,6 +1731,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Butterfly (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
@@ -2107,6 +2142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}
 --- !u!1 &2084734905
@@ -2267,6 +2307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Butterfly
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883605356667898465, guid: 57797af58bc68d84e9c5c9b4ddf1daf2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57797af58bc68d84e9c5c9b4ddf1daf2, type: 3}

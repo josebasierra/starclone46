@@ -13,16 +13,21 @@ public class Health : MonoBehaviour
     float currentHealth;
     bool bulletImmunity;
 
+    bool fullImmunity;
 
 
     void Start()
     {
         currentHealth = maxHealth;
         bulletImmunity = false;
+        fullImmunity = false;
     }
 
 
-    public void TakeDamage(float damage) {
+    public void TakeDamage(float damage)
+    {
+
+        if (fullImmunity) return;
 
         currentHealth -= damage;
 
@@ -30,10 +35,11 @@ public class Health : MonoBehaviour
         {
             OnDeath?.Invoke();   //invocation of OnDeath event
             Destroy(this.gameObject);
-        }      
+        }
     }
 
-    public void Heal() {
+    public void Heal()
+    {
         currentHealth += healHealth;
     }
 
@@ -53,5 +59,29 @@ public class Health : MonoBehaviour
         {
             TakeDamage(damageComponent.GetDamage());
         }
+    }
+
+
+    //TODO: on asteroid clash sound/effect
+    //TODO: die if clash with Static tag
+    private void OnCollisionEnter(Collision collision)
+    {
+        fullImmunity = true;
+        if (fullImmunity && collision.transform.tag == "Static") StartCoroutine(ColliderDesactivation());
+    }
+
+
+    private IEnumerator ColliderDesactivation()
+    {
+        float desactivationTime = 1f;
+        float t = 0;
+
+        transform.Find("Colliders").gameObject.SetActive(false);
+        while (t < desactivationTime)
+        {
+            yield return null;
+            t += Time.deltaTime;
+        }
+        transform.Find("Colliders").gameObject.SetActive(true);
     }
 }
