@@ -5,22 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public static GameManager instance;
     public int score = 0;
+
+
+    public int GetScore() => score;
+
 
     public void AddScore(int points)
     {
         score += points;
     }
 
-    public int getScore() => score;
 
-
-    public void LoadLevel(int level)
+    public void LoadScene(int level)
     {
         SceneManager.LoadScene(level);
-        instance.score = 0;
+    }
+
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 
@@ -31,17 +36,24 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Awake()
+    public void GodMode(bool value)
     {
-        //singleton
-        if (instance != null)
+        GameObject player = GameObject.Find("PlayerShip");
+
+        if (player != null)
         {
-            Destroy(gameObject);
+            Health health = player.GetComponent<Health>();
+            if (health != null) health.SetGodMode(value);
         }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+    }
+
+    public void TurnMusic(bool value)
+    {
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+        AudioSource source = camera.GetComponent<AudioSource>();
+        if (source != null) {
+            if (value) source.Play();
+            else source.Stop();
         }
     }
 }

@@ -12,28 +12,27 @@ public class Health : MonoBehaviour
 
     float currentHealth;
     bool bulletImmunity;
-
-    bool fullImmunity;
+    bool godMode;
 
 
     void Start()
     {
         currentHealth = maxHealth;
         bulletImmunity = false;
-        fullImmunity = false;
+        godMode = false;
     }
 
 
     public void TakeDamage(float damage)
     {
 
-        if (fullImmunity) return;
+        if (godMode) return;
 
         currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
-            OnDeath?.Invoke();   //invocation of OnDeath event
+            OnDeath?.Invoke();
             Destroy(this.gameObject);
         }
     }
@@ -51,6 +50,9 @@ public class Health : MonoBehaviour
 
     public void SetBulletImmunity(bool value) => bulletImmunity = value;
 
+    public void SetGodMode(bool value) => godMode = value;
+
+
     // check for bullet impacts (bullet = object with damage component)
     private void OnTriggerEnter(Collider other)
     {
@@ -66,8 +68,7 @@ public class Health : MonoBehaviour
     //TODO: die if clash with Static tag
     private void OnCollisionEnter(Collision collision)
     {
-        fullImmunity = true;
-        if (fullImmunity && collision.transform.tag == "Static") StartCoroutine(ColliderDesactivation());
+        if (godMode && collision.transform.tag == "Static") StartCoroutine(ColliderDesactivation());
     }
 
 

@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class ScorePoints : MonoBehaviour
 {
     public int points = 25;
+
+    GameManager gameManager;
     Health health;
+
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         health = GetComponent<Health>();
         if (health != null) health.OnDeath += OnDeath;
     }
@@ -22,6 +27,6 @@ public class ScorePoints : MonoBehaviour
 
     void OnDeath()
     {
-        GameManager.instance.AddScore(points);
+        gameManager.AddScore(points);
     }
 }
