@@ -14,9 +14,6 @@ public class RifleWeapon : MonoBehaviour, IWeapon
     public Transform endPoint;
 
 
-    public AudioClip sound;
-
-
     float timeWithoutActivating = 0f;
     AudioSource source;
 
@@ -49,7 +46,12 @@ public class RifleWeapon : MonoBehaviour, IWeapon
 
         Destroy(bulletTransform.gameObject, 6);    //destroy bullet after N seconds
 
-        if (source != null) source.PlayOneShot(sound, 0.1f);
+
+        if (source != null)
+        {
+            source.pitch = Random.Range(0.85f, 1f);
+            source.Play();
+        }
     }
 
 }

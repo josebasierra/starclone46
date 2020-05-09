@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 2513055597907315855}
   - component: {fileID: -107173199843313966}
   m_Layer: 0
-  m_Name: StandardWeapon
+  m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,6 @@ MonoBehaviour:
     type: 3}
   releasePoint: {fileID: 2513055596501171056}
   endPoint: {fileID: 2513055597173057279}
-  sound: {fileID: 8300000, guid: 0f3ceb2c4dca51f45924e044eaa0acff, type: 3}
 --- !u!82 &-107173199843313966
 AudioSource:
   m_ObjectHideFlags: 0
@@ -126,7 +125,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91ed57d60ee1e6646810bddb0376ea08, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -17,6 +17,8 @@ public class LaserWeapon : MonoBehaviour, IWeapon
     string ownerTag;
     Energy energy;
 
+    AudioSource source;
+
     public void Activate()
     {
         isActivated = true;
@@ -35,6 +37,8 @@ public class LaserWeapon : MonoBehaviour, IWeapon
         // laser no visible
         lineRenderer.SetPosition(0, startPoint.position);
         lineRenderer.SetPosition(1, startPoint.position);
+
+        source = GetComponent<AudioSource>();
     }
 
 
@@ -43,12 +47,14 @@ public class LaserWeapon : MonoBehaviour, IWeapon
         if (isActivated && (energy == null || energy.Consume(energyCostPerSecond * Time.deltaTime) ) )
         {
             EmitLaser();
+            if (!source.isPlaying) source.Play();
         }
             
         else
         {
             lineRenderer.SetPosition(0, startPoint.position);
             lineRenderer.SetPosition(1, startPoint.position);
+            source.Stop();
         }
         isActivated = false;
 
