@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 5049349695197619132, guid: 719914c6332eb46428892f64dba2168c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5049349695197619132, guid: 719914c6332eb46428892f64dba2168c,
         type: 3}
@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 85a01809e675700468259b04617061be, type: 3}
+    - target: {fileID: 5231914216317077190, guid: 719914c6332eb46428892f64dba2168c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719914c6332eb46428892f64dba2168c, type: 3}
 --- !u!1 &294744424
@@ -1452,7 +1457,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555244242}
+      - m_Target: {fileID: 1916507796}
         m_MethodName: ViewInstructions
         m_Mode: 1
         m_Arguments:
@@ -1555,7 +1560,7 @@ PrefabInstance:
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
@@ -2120,7 +2125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555244242}
+      - m_Target: {fileID: 1916507796}
         m_MethodName: ViewLevelMenu
         m_Mode: 1
         m_Arguments:
@@ -2632,7 +2637,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1534176539
 GameObject:
@@ -2791,53 +2796,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534176539}
   m_CullTransparentMesh: 0
---- !u!1 &1555244241
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1555244243}
-  - component: {fileID: 1555244242}
-  m_Layer: 0
-  m_Name: MenuManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1555244242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555244241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200d89e98cf862d46b4fb939b44704a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenu: {fileID: 313351530}
-  levelMenu: {fileID: 1495584135}
-  instructions: {fileID: 2054619295}
-  credits: {fileID: 653982404}
---- !u!4 &1555244243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555244241}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1275.2908, y: 710.3573, z: -162}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627386632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +2962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916507795}
+  - component: {fileID: 1916507796}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -3028,8 +2987,24 @@ Transform:
   - {fileID: 653982405}
   - {fileID: 536171450}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916507796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916507794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200d89e98cf862d46b4fb939b44704a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 313351530}
+  levelMenu: {fileID: 1495584135}
+  instructions: {fileID: 2054619295}
+  credits: {fileID: 653982404}
 --- !u!1 &2054619295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,7 +3186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555244242}
+      - m_Target: {fileID: 1916507796}
         m_MethodName: ViewCredits
         m_Mode: 1
         m_Arguments:

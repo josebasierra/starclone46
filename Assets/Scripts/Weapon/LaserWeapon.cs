@@ -47,14 +47,14 @@ public class LaserWeapon : MonoBehaviour, IWeapon
         if (isActivated && (energy == null || energy.Consume(energyCostPerSecond * Time.deltaTime) ) )
         {
             EmitLaser();
-            if (!source.isPlaying) source.Play();
+            if (source != null && !source.isPlaying) source.Play();
         }
             
         else
         {
             lineRenderer.SetPosition(0, startPoint.position);
             lineRenderer.SetPosition(1, startPoint.position);
-            source.Stop();
+            if (source != null) source.Stop();
         }
         isActivated = false;
 

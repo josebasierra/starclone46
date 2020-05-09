@@ -5542,7 +5542,7 @@ MonoBehaviour:
   rollSpeedMultiplier: 1.2
   rollDuration: 0.45
   turns: 1.1
-  rollEnergyCost: 40
+  rollEnergyCost: 35
 --- !u!114 &3447441065435424463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5603,7 +5603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 100
-  energyPerSecond: 5
+  energyPerSecond: 10
   rechargeEnergy: 20
   cooldownThreshold: 0.4
 --- !u!1 &7480862549255534934

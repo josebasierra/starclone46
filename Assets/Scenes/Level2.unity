@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -321,7 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &344054226
 PrefabInstance:
@@ -623,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 5049349695197619132, guid: 719914c6332eb46428892f64dba2168c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5049349695197619132, guid: 719914c6332eb46428892f64dba2168c,
         type: 3}
@@ -640,6 +640,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5231914216317077190, guid: 719914c6332eb46428892f64dba2168c,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 85a01809e675700468259b04617061be, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719914c6332eb46428892f64dba2168c, type: 3}
 --- !u!1001 &624017830
@@ -1983,6 +1988,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1954184608, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010014634, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 333739148}
+    - target: {fileID: 2010014634, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010014634, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145534495, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 333739148}
+    - target: {fileID: 2145534495, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145534495, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145534495, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 3441033422101478925, guid: 0653147bee0c834429ff1576316f5436,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2041,7 +2078,7 @@ PrefabInstance:
     - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
         type: 3}

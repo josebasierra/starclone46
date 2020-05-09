@@ -19,12 +19,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int level)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(level);
     }
 
 
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 
