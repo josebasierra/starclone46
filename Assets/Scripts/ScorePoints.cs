@@ -14,7 +14,7 @@ public class ScorePoints : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
 
         health = GetComponent<Health>();
         if (health != null) health.OnDeath += OnDeath;

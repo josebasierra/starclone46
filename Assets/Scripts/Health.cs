@@ -57,7 +57,7 @@ public class Health : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var damageComponent = other.gameObject.GetComponent<DamageComponent>();
-        if (damageComponent != null && other.tag != this.tag && !bulletImmunity)
+        if (damageComponent != null && !this.CompareTag(other.tag) && !bulletImmunity)
         {
             TakeDamage(damageComponent.GetDamage());
         }
@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
     //TODO: die if clash with Static tag
     private void OnCollisionEnter(Collision collision)
     {
-        if (godMode && collision.transform.tag == "Static") StartCoroutine(ColliderDesactivation());
+        if (godMode && collision.transform.CompareTag("Static")) StartCoroutine(ColliderDesactivation());
     }
 
 

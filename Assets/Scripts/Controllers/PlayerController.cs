@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastTap_A;
     float timeSinceLastTap_D;
 
+    GameMenuManager gameMenuManager;
     void Start()
     {
         moveComponent = this.GetComponent<PlayerMovement>();
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
         timeSinceLastTap_S = doubleTapTime;
         timeSinceLastTap_A = doubleTapTime;
         timeSinceLastTap_D = doubleTapTime;
+
+        gameMenuManager = GameObject.FindGameObjectWithTag("Manager")?.GetComponent<GameMenuManager>();
     }
 
 
@@ -124,14 +127,21 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "HealthSupply") {
+        if (other.gameObject.CompareTag("HealthSupply")) {
             health.Heal();
             Destroy(other.gameObject);
         }
         
-        if (other.gameObject.tag == "EnergySupply") {
+        else if (other.gameObject.CompareTag("EnergySupply")) {
             energy.Recharge();
             Destroy(other.gameObject);
         }
+
+        else if (other.gameObject.CompareTag("Win"))
+        {
+            if (gameMenuManager != null) gameMenuManager.ViewWinMenu();
+        }
+
+
     }
 }

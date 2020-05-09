@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour
+public class GameMenuManager : MonoBehaviour
 {
-    bool isPaused = false;
-    GameObject player;
-
     public GameObject pauseMenu;
+    public GameObject winMenu;
+
+    bool isPaused = false;
+    bool inWinMenu = false;
+    GameObject player;
 
 
 
@@ -15,6 +17,13 @@ public class PauseManager : MonoBehaviour
 
     public void SetIsPaused(bool value) => isPaused = value;
 
+    public void ViewWinMenu()
+    {
+        if (player != null) player.GetComponent<Health>().SetGodMode(true);
+        inWinMenu = true;
+        pauseMenu.SetActive(false);
+        winMenu.SetActive(true);
+    }
 
     public void Resume()
     {
@@ -37,11 +46,14 @@ public class PauseManager : MonoBehaviour
     void Start() 
     {
         pauseMenu.SetActive(false);
+        winMenu.SetActive(false);
         player = GameObject.Find("PlayerShip"); 
     }
 
     void Update()
     {
+        if (inWinMenu) return;
+
         if (Input.GetKeyDown("escape"))
         {
             if (isPaused) Resume();

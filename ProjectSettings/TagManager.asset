@@ -8,6 +8,8 @@ TagManager:
   - EnergySupply
   - HealthSupply
   - Static
+  - Manager
+  - Win
   layers:
   - Default
   - TransparentFX

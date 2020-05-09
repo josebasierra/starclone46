@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class ScoreDisplay : MonoBehaviour
 {
     public Text text;
     int score;
@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     void Update()
