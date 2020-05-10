@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -885,7 +885,7 @@ PrefabInstance:
     - target: {fileID: 551498785789589020, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 551498785789589020, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
@@ -2019,6 +2019,11 @@ PrefabInstance:
     - target: {fileID: 2145534495, guid: 0653147bee0c834429ff1576316f5436, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056343972187597820, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441033422101478925, guid: 0653147bee0c834429ff1576316f5436,
         type: 3}
