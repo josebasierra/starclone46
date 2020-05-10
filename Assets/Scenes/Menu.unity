@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2537,9 +2537,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ship  Movement\t\t\t       Using  Mouse\nWeapon\t\t\t\t\t\t\t\t      Mouse1\nLaser\t\t\t\t\t\t\t               
-    Mouse2\nDodge \t\t\t\t\t      w,s,d,a     2  times\nBoost\t\t\t\t\t\t\t                     
-    Shift\nStop  Boost\t                                                           
+  m_text: "Move/AIM\t\t\t                          Using  Mouse\nWeapon\t\t\t\t\t\t\t\t     
+    Mouse1\nLaser\t\t\t\t\t\t\t                Mouse2\nTI LT\t\t\t\t\t\t\t                                       
+    a,d\nDodge \t\t\t\t\t      w,s,d,a     2  times\nBoost\t\t\t\t\t\t\t                     
+    Shift\nSlow  down\t                                                                     
     SPACE\nPause  menu\t\t\t\t\t                             ESC\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7da775be9dd9174b80179633b7c18c3, type: 2}
@@ -2586,7 +2587,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 255
+  m_firstOverflowCharacterIndex: 246
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2610,12 +2611,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1365885453}
-    characterCount: 305
+    characterCount: 383
     spriteCount: 0
-    spaceCount: 206
-    wordCount: 23
+    spaceCount: 282
+    wordCount: 27
     linkCount: 0
-    lineCount: 8
+    lineCount: 9
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
