@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         timeSinceLastTap_A = doubleTapTime;
         timeSinceLastTap_D = doubleTapTime;
 
+        if (health != null) health.OnDeath += OnDeath;
         gameMenuManager = GameObject.FindGameObjectWithTag("Manager")?.GetComponent<GameMenuManager>();
     }
 
@@ -141,7 +142,17 @@ public class PlayerController : MonoBehaviour
         {
             if (gameMenuManager != null) gameMenuManager.ViewWinMenu();
         }
+    }
 
 
+    private void OnDeath()
+    {
+        gameMenuManager.ViewLoseMenu();
+    }
+
+
+    private void OnDisable()
+    {
+        if (health != null) health.OnDeath -= OnDeath;
     }
 }

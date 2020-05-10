@@ -1,29 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameMenuManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject winMenu;
+    public GameObject loseMenu;
 
     bool isPaused = false;
-    bool inWinMenu = false;
+    bool winOrLoseMenu = false;
     GameObject player;
-
 
 
     public bool IsPaused() => isPaused;
 
     public void SetIsPaused(bool value) => isPaused = value;
 
-    //TODO: update text score with score obtained
+
+    public void ViewLoseMenu()
+    {
+        winOrLoseMenu = true;
+        loseMenu.SetActive(true);
+
+        int score = GetComponent<GameManager>().GetScore();
+        loseMenu.transform.Find("text_score").GetComponent<TextMeshProUGUI>().text = "SCORE: " + score.ToString();
+    }
+
     public void ViewWinMenu()
     {
         if (player != null) player.GetComponent<Health>().SetGodMode(true);
-        inWinMenu = true;
-        pauseMenu.SetActive(false);
+
+        winOrLoseMenu = true;
         winMenu.SetActive(true);
+
+        int score = winMenu.GetComponentInParent<GameManager>().GetScore();
+        winMenu.transform.Find("text_score").GetComponent<TextMeshProUGUI>().text = "SCORE: " + score.ToString();
     }
 
     public void Resume()
@@ -48,12 +61,14 @@ public class GameMenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         winMenu.SetActive(false);
+        loseMenu.SetActive(false);
         player = GameObject.Find("PlayerShip"); 
     }
 
+
     void Update()
     {
-        if (inWinMenu) return;
+        if (winOrLoseMenu) return;
 
         if (Input.GetKeyDown("escape"))
         {
