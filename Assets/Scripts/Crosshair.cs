@@ -13,21 +13,21 @@ public class Crosshair : MonoBehaviour
 
     private Transform crosshairNear;
     private Transform crosshairFar;
-
+    private Transform mainCamera;
 
     void Start()
     {
         crosshairNear = Instantiate(scope1Prefab).transform;
         crosshairFar = Instantiate(scope2Prefab).transform;
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
-
+    //TODO: Draw crosshair on top 
     void Update()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = crosshairDistance;
 
-        //we need to restrict the aim, the camera movement depends on it, if we don't, player rotates itself...
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
 
@@ -39,6 +39,8 @@ public class Crosshair : MonoBehaviour
         Vector3 dir = this.transform.position - crosshairFar.position;
         crosshairNear.position = crosshairFar.position + (dir.normalized * dir.magnitude* 0.4f);
 
+        crosshairNear.transform.rotation = mainCamera.rotation;
+        crosshairFar.transform.rotation = mainCamera.rotation;
     }
 
     public Vector3 GetAimPosition()

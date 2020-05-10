@@ -17,6 +17,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void SetIsPaused(bool value) => isPaused = value;
 
+    //TODO: update text score with score obtained
     public void ViewWinMenu()
     {
         if (player != null) player.GetComponent<Health>().SetGodMode(true);
