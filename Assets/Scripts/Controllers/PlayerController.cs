@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastTap_A;
     float timeSinceLastTap_D;
 
+    [Header("Sounds")]
+    public AudioSource audio;
+    public AudioClip supplySound;
+    public AudioClip winSound;
+
+
     GameMenuManager gameMenuManager;
     void Start()
     {
@@ -130,17 +136,20 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("HealthSupply")) {
             health.Heal();
+            audio.PlayOneShot(supplySound,0.7f);
             Destroy(other.gameObject);
         }
         
         else if (other.gameObject.CompareTag("EnergySupply")) {
             energy.Recharge();
+            audio.PlayOneShot(supplySound,0.7f);
             Destroy(other.gameObject);
         }
 
         else if (other.gameObject.CompareTag("Win"))
         {
             if (gameMenuManager != null) gameMenuManager.ViewWinMenu();
+            audio.PlayOneShot(winSound,0.7f);
         }
     }
 
