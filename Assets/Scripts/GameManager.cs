@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void TurnMusic(bool value)
     {
+        Debug.Log(value);
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         AudioSource source = camera.GetComponent<AudioSource>();
         if (source != null) {

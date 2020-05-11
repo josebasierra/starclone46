@@ -72,7 +72,7 @@ public class LaserWeapon : MonoBehaviour, IWeapon
         if (Physics.Raycast(startPoint.position, laserDirection, out hit, range))
         {
             Health health = hit.transform.GetComponent<Health>();
-            if (health != null && !hit.transform.CompareTag(ownerTag))
+            if (health != null && !hit.transform.CompareTag(ownerTag) && (ownerTag != "Enemy" || hit.transform.CompareTag("Player")))
             {
                 health.TakeDamage(dps * Time.deltaTime);
             }
