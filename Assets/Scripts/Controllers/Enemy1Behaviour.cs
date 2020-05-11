@@ -8,6 +8,7 @@ public class Enemy1Behaviour : MonoBehaviour
 	BasicMovement moveComponent;
 	
 	public Transform target;
+    public float distance;
 
 	Vector3 playerPosition;
     Transform transformPlayer;
@@ -33,7 +34,11 @@ public class Enemy1Behaviour : MonoBehaviour
 
         if (attackComponent != null)
         {
-            if (transform.position.z > playerPosition.z) attackComponent.BasicAttack();
+            if (transform.position.z > playerPosition.z) {
+                if (Mathf.Abs(transform.position.z-playerPosition.z) <= distance) {
+                    attackComponent.BasicAttack();
+                }
+            }  
         }
     }
 

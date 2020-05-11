@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     bool bulletImmunity;
     bool godMode;
 
+    public GameObject explosion;
 
     void Start()
     {
@@ -21,7 +22,6 @@ public class Health : MonoBehaviour
         bulletImmunity = false;
         godMode = false;
     }
-
 
     public void TakeDamage(float damage)
     {
@@ -33,6 +33,14 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             OnDeath?.Invoke();
+            
+            //crear explosion y sonido con efecto aparte
+            
+            GameObject aux = Instantiate(explosion);
+            aux.transform.position = this.transform.position;
+
+            aux.GetComponent<AudioSource>().Play();
+
             Destroy(this.gameObject);
         }
     }

@@ -10,6 +10,7 @@ public class TurretBehaviour : MonoBehaviour
 
     Transform transformPlayer;
     
+    public float distance = 100f; //distancia para empezar a disparar
 
     void Start()
     {
@@ -29,8 +30,13 @@ public class TurretBehaviour : MonoBehaviour
 		
 		if (attackComponent != null)
         {
-            if (transform.position.z > playerPosition.z) attackComponent.BasicAttack();
+            if (transform.position.z > playerPosition.z) {
+                if (Mathf.Abs(transform.position.z-playerPosition.z) <= distance) {
+                    attackComponent.BasicAttack();
+                }
+            } 
         }
+
     }
 
     public void LookAt(Vector3 target)
