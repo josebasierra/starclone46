@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5241665976100103290}
   - component: {fileID: 5241665976100103291}
   - component: {fileID: 5241665976100103292}
-  - component: {fileID: 5241665976100103293}
+  - component: {fileID: 1708366504353393282}
   - component: {fileID: 5241665976100103294}
   - component: {fileID: 5241665976100103295}
   m_Layer: 0
@@ -66,7 +66,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.33
   m_Center: {x: 0, y: -0.5, z: -0.48}
---- !u!114 &5241665976100103293
+--- !u!114 &1708366504353393282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,9 +75,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5241665976100103280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7a342cc3fb42346ae3b4d073f13258, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ef9b0ee863afcb499da86247631afd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 100
 --- !u!114 &5241665976100103294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +571,6 @@ MonoBehaviour:
     type: 3}
   releasePoint: {fileID: 5241665977030765719}
   endPoint: {fileID: 5241665977308023243}
-  sound: {fileID: 0}
 --- !u!1 &5241665977506924255
 GameObject:
   m_ObjectHideFlags: 0
