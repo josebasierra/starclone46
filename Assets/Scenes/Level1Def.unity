@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &11138403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &60864238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,6 +923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &80773476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &94093099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,6 +1575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &100724986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,6 +1778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &107498200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,6 +1981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &118187985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,6 +2105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &139031091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,6 +2377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &154532385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2492,6 +2501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &161721813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2684,6 +2694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &270304552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2985,6 +2996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &297509782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3108,6 +3120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &301968094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,6 +3317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &305445333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,6 +3441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &305869971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3550,6 +3565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &314735709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,6 +3751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &326254768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,6 +3875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &345489632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3981,6 +3999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &347081300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4173,6 +4192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &367493935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4365,6 +4385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &376708801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4580,6 +4601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &385001839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,6 +4725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &390993149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,6 +4849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &392779664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5033,6 +5057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &425685405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,6 +5610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &455979023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5708,6 +5734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &456083120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5962,6 +5989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &500592372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6085,6 +6113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &509238844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6277,6 +6306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &517327759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6404,6 +6434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &523803316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6747,6 +6778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &568036133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6932,6 +6964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &581481206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7055,6 +7088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &586104249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7178,6 +7212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &608083272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7370,6 +7405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &616397013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7493,6 +7529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &629916124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7567,310 +7604,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629916121}
   m_Mesh: {fileID: 8155765629141027734, guid: 11b721c7147318e44a7089b28000be64, type: 3}
---- !u!1001 &632844803
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1954184608, guid: 0653147bee0c834429ff1576316f5436, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056343972187597820, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422101478925, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422475543651, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422475543651, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422542273254, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_Name
-      value: InGameMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033423752448812, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441033423752448812, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4745457568147106615, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4745457568147106615, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
-        type: 3}
-      propertyPath: m_textInfo.materialCount
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0653147bee0c834429ff1576316f5436, type: 3}
 --- !u!1 &649166261
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,6 +7657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &649166264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8047,6 +7781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &681222033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8249,6 +7984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &692304465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8372,6 +8108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &701575158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8819,6 +8556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &719205108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9021,6 +8759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &740319588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9386,6 +9125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &783208156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9593,6 +9333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &807748406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9716,6 +9457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &808059092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10344,6 +10086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &827727860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10564,6 +10307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &852865207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10687,6 +10431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &873104499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10810,6 +10555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &877597111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11064,6 +10810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &891889300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11187,6 +10934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &907744868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11488,6 +11236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &930179034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11680,6 +11429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &950977159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11803,6 +11553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &952941074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12243,6 +11994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &991293585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12317,6 +12069,331 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991293582}
   m_Mesh: {fileID: 8155765629141027734, guid: 9e3f76f461f6de942a6633051581bbb0, type: 3}
+--- !u!1001 &1010911452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 43625319, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254666132, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539152471, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154120595, guid: 0653147bee0c834429ff1576316f5436, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422475543651, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422475543651, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273254, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_Name
+      value: InGameMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033422542273255, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033423752448812, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441033423752448812, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745457568147106615, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745457568147106615, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932323740894677499, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075154515396946194, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381562779007268567, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600476031965838357, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697306529868586713, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008889717404743641, guid: 0653147bee0c834429ff1576316f5436,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0653147bee0c834429ff1576316f5436, type: 3}
 --- !u!1 &1020000049
 GameObject:
   m_ObjectHideFlags: 0
@@ -12370,6 +12447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1020000052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12493,6 +12571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1028921015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12779,6 +12858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1038895156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12981,6 +13061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1077468667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13267,6 +13348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1094708781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13571,6 +13653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1133676386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13694,6 +13777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1138763179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14053,6 +14137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1160600358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14176,6 +14261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1166324178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14383,6 +14469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1170431551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14506,6 +14593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1177614744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14898,6 +14986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1222935956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15363,6 +15452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1263476678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15867,6 +15957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1305046182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15990,6 +16081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1311981275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16192,6 +16284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1319320195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16639,6 +16732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1342796347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16903,6 +16997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1364457249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17099,6 +17194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1387041312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17291,6 +17387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1405627896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17414,6 +17511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1407145554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17537,6 +17635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1424117518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17660,6 +17759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1425972036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17868,6 +17968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1442595105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18075,6 +18176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1457339023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18260,6 +18362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1492771649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18383,6 +18486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1493192239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18777,6 +18881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1501541591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18900,6 +19005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1501681980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19085,6 +19191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1518258280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19208,6 +19315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1522938228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19610,6 +19718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1543820118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19739,6 +19848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1567774570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19862,6 +19972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1575837126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19985,6 +20096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1576082800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20108,6 +20220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1579448174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20231,6 +20344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1587327273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20354,6 +20468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1593268476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20477,6 +20592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1613231394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20600,6 +20716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1621072151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20968,6 +21085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1645288437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21097,6 +21215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1655333643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21304,6 +21423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1664143883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21427,6 +21547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1675557971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21550,6 +21671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1677370303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21735,6 +21857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1701333017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21858,6 +21981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1711614082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22129,6 +22253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1731210519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22314,6 +22439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1754195839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22437,6 +22563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1763895271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22652,6 +22779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1773678427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23211,6 +23339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1796849734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23726,6 +23855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1847263724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23928,6 +24058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1866372702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24051,6 +24182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1868129951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24174,6 +24306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1893666219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24376,6 +24509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1906304463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24499,6 +24633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1919004939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24626,6 +24761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1919278254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24749,6 +24885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1945717985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25161,6 +25298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &1970615910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25596,6 +25734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2018215517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26047,6 +26186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2047474529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26245,6 +26385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2049640230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26368,6 +26509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2055547721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26649,6 +26791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2076917579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26772,6 +26915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 80
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2079419042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26895,6 +27039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2084961883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27194,6 +27339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2091286728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27396,6 +27542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2109981748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27519,6 +27666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2120075179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27721,6 +27869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2128945480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27844,6 +27993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2133714700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27967,6 +28117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
+  explosion: {fileID: 0}
 --- !u!114 &2145086408
 MonoBehaviour:
   m_ObjectHideFlags: 0
