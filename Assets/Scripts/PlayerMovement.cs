@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public float turns = 2;        //vueltas que da la nave sobre si misma en un roll
     public float rollEnergyCost = 40f;
 
+    [Header("Sounds")]
+    public AudioClip boostSound;
+    public AudioClip rollSound;
 
     bool isRolling;
     bool isTilting;
@@ -34,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rigidbody;
     Health health;
     Energy energy;
+    AudioSource audioSource;
+    AudioSource boostSource;
 
     void Start()
     {
@@ -44,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         health = GetComponent<Health>();
         energy = GetComponent<Energy>();
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        audioSource = audioSources[0];
+        boostSource = audioSources[1];
+
+        boostSource.clip = boostSound;
     }
 
 
@@ -70,10 +81,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void Boost()
     {
-        if (isSlowingDown) return;
-
-        if (energy.Consume(boostEnergyPerSecond*Time.deltaTime))
+        if (!isSlowingDown && energy.Consume(boostEnergyPerSecond*Time.deltaTime))
+        {
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, forwardSpeed * boostSpeedMultiplier);
+            if (!boostSource.isPlaying) boostSource.Play();
+
+        }
+        else
+        {
+            boostSource.Stop();
+        }
+
+    }
+
+    public void StopBoosting()
+    {
+        boostSource.Stop();
     }
 
 
@@ -119,6 +142,8 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Rolling(Vector2 rollDirection)
     {
+        audioSource.PlayOneShot(rollSound);
+
         isRolling = true;
         if (health != null) health.SetBulletImmunity(true);
         rigidbody.velocity = new Vector3(rollDirection.x * lateralSpeed * rollSpeedMultiplier, rollDirection.y * lateralSpeed * rollSpeedMultiplier, rigidbody.velocity.z);
