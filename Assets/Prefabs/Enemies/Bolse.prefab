@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 4566997928366114721}
   - component: {fileID: -8110890717667326976}
   - component: {fileID: 4566997928366114722}
+  - component: {fileID: 281953012}
+  - component: {fileID: 281953006}
   m_Layer: 0
   m_Name: Bolse
   m_TagString: Enemy
@@ -111,7 +113,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4566997928366114749}
-  m_LocalRotation: {x: -0, y: -0.9999943, z: -0, w: 0.003381823}
+  m_LocalRotation: {x: 0, y: -0.9999943, z: 0, w: 0.0033859115}
   m_LocalPosition: {x: 0.43848583, y: 0.41, z: 97.77568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -149,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  distance: 100
 --- !u!114 &4566997928366114751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b58e617afcefc43a604547b4eccce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 1
 --- !u!114 &-8110890717667326976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,8 +192,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92013ede45c1234bbc853cc038ef871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
   healHealth: 10
+  explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
+    type: 3}
 --- !u!135 &4566997928366114722
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -203,7 +208,33 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.51, z: -0.34}
+--- !u!65 &281953012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566997928366114749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.65, y: 0.31, z: 1}
+  m_Center: {x: 0, y: 0.12, z: 0}
+--- !u!114 &281953006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566997928366114749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5d21a49071cfe489ad87446caf1b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 25
 --- !u!1001 &7830927344063434453
 PrefabInstance:
   m_ObjectHideFlags: 0
