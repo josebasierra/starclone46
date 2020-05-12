@@ -39,8 +39,6 @@ public class Health : MonoBehaviour
             GameObject aux = Instantiate(explosion);
             aux.transform.position = this.transform.position;
 
-            aux.GetComponent<AudioSource>().Play();
-
             Destroy(this.gameObject);
         }
     }
