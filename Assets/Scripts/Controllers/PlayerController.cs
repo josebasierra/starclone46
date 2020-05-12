@@ -65,6 +65,10 @@ public class PlayerController : MonoBehaviour
             {
                 moveComponent.Boost();
             }
+            else if (Input.GetButtonUp("Boost"))
+            {
+                moveComponent.StopBoosting();
+            }
 
             if (Input.GetButton("SlowDown"))
             {
