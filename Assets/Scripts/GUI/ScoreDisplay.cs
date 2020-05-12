@@ -17,7 +17,7 @@ public class ScoreDisplay : MonoBehaviour
     void Update()
     {
      	score = gameManager.GetScore();
-        //print();
+        print();
     }
 
     private void print() 

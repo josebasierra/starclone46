@@ -36,9 +36,11 @@ public class Health : MonoBehaviour
             
             //crear explosion y sonido con efecto aparte
             
-            GameObject aux = Instantiate(explosion);
-            aux.transform.position = this.transform.position;
-
+            if (explosion != null) {
+                GameObject aux = Instantiate(explosion);
+                aux.transform.position = this.transform.position;
+            }
+            
             Destroy(this.gameObject);
         }
     }
