@@ -97,9 +97,7 @@ GameObject:
   - component: {fileID: 4566997928366114721}
   - component: {fileID: -8110890717667326976}
   - component: {fileID: 4566997928366114722}
-  - component: {fileID: 281953012}
   - component: {fileID: 281953006}
-  - component: {fileID: 1395131268}
   - component: {fileID: 1086432209}
   m_Layer: 0
   m_Name: Bolse
@@ -209,21 +207,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.51, z: -0.34}
---- !u!65 &281953012
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4566997928366114749}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.65, y: 0.31, z: 1}
-  m_Center: {x: 0, y: 0.12, z: 0}
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.51, z: 0.4}
 --- !u!114 &281953006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,19 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 25
---- !u!114 &1395131268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4566997928366114749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa739a23d219e64a96ff9b69b8bb481, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 100}
 --- !u!114 &1086432209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9de9288cf40b874b82f1fefebdee6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 10
+  time: 20
 --- !u!1001 &7830927344063434453
 PrefabInstance:
   m_ObjectHideFlags: 0
