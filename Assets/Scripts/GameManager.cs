@@ -5,10 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = 0;
+    int score = 0;
+    float countdown = 1f;
 
+    private void Update()
+    {
+        countdown -= Time.deltaTime;
+        if(countdown <= 0)
+        {
+            countdown = 1 + countdown;
+            score--;
+        }
+    }
 
     public int GetScore() => score;
+
 
     public void AddScore(int points)
     {
