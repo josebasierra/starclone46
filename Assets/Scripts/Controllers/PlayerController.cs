@@ -141,12 +141,17 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("HealthSupply")) {
             health.Heal();
             audio.PlayOneShot(supplySound,0.7f);
+
+            other.gameObject.SetActive(false);
             Destroy(other.gameObject);
         }
         
         else if (other.gameObject.CompareTag("EnergySupply")) {
             energy.Recharge();
+            other.GetComponent<ScorePoints>()?.AddScore();
             audio.PlayOneShot(supplySound,0.7f);
+
+            other.gameObject.SetActive(false);  //onTrigger is called more than one time before objects is destroyed?? desactivation needed
             Destroy(other.gameObject);
         }
 

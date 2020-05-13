@@ -11,6 +11,10 @@ public class ScorePoints : MonoBehaviour
     GameManager gameManager;
     Health health;
 
+    public void AddScore()
+    {
+        gameManager.AddScore(points);
+    }
 
     void Start()
     {
