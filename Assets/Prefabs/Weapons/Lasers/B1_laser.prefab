@@ -10,7 +10,17 @@ PrefabInstance:
     - target: {fileID: 7458558573074832800, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
         type: 3}
       propertyPath: m_Name
-      value: Laser
+      value: B1_laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458558573074832802, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: range
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458558573074832802, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: dps
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7458558573074832862, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
         type: 3}

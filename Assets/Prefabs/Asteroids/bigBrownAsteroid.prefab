@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4258288698975526474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,4 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   healHealth: 10
-  explosion: {fileID: 0}
+  explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
+    type: 3}

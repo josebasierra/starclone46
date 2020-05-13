@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8722106484803642325}
   - component: {fileID: -7363788222867103710}
   - component: {fileID: 4622529221082887579}
+  - component: {fileID: 7500510918273124685}
   m_Layer: 0
   m_Name: LaserAsteroid
   m_TagString: Enemy
@@ -61,6 +62,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healHealth: 10
+  explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
+    type: 3}
 --- !u!135 &4622529221082887579
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -74,6 +77,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.21
   m_Center: {x: 0, y: 0, z: 0.02}
+--- !u!114 &7500510918273124685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266233891724752106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5d21a49071cfe489ad87446caf1b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
 --- !u!1001 &1266233892062850219
 PrefabInstance:
   m_ObjectHideFlags: 0

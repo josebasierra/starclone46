@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 3753034538253396420}
   - component: {fileID: 4288293440373255468}
   - component: {fileID: 969035806114486848}
+  - component: {fileID: -276648919334753305}
   m_Layer: 0
   m_Name: fakeAsteroid
   m_TagString: Untagged
@@ -205,6 +206,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healHealth: 10
+  explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
+    type: 3}
+--- !u!114 &-276648919334753305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981249054943684826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5d21a49071cfe489ad87446caf1b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
 --- !u!1 &6427848583626929724
 GameObject:
   m_ObjectHideFlags: 0

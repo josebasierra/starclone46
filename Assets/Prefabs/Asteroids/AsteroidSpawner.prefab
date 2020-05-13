@@ -51,7 +51,6 @@ MonoBehaviour:
   - {fileID: 3849741884421518553, guid: de532ad2ea723414e976fd6181862cea, type: 3}
   - {fileID: 2925938419830286351, guid: 073bcf5ee7ae604418bc27ce3e45a321, type: 3}
   - {fileID: 2814779837688920318, guid: d7f3521a920a0bb40a07e8bbf2a8a450, type: 3}
-  - {fileID: 5271210619461711783, guid: 180a30789a6dfdf4e8a68db8cb448bcd, type: 3}
   spawnRange: {x: 75.47, y: 40, z: 198.9}
   spawnCount: 50
   respawn: 0

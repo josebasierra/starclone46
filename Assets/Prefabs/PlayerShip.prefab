@@ -901,7 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnergy: 100
   energyPerSecond: 10
-  rechargeEnergy: 20
+  rechargeEnergy: 100
   cooldownThreshold: 0.4
 --- !u!82 &1274310812
 AudioSource:

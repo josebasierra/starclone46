@@ -10,41 +10,49 @@ public class Enemy1Behaviour : MonoBehaviour
 	public Transform target;
     public float distance;
 
-	Vector3 playerPosition;
-    Transform transformPlayer;
+    Transform player;
+
+    Vector3 initDirection;
 
 
     void Start()
     {
         attackComponent = this.GetComponent<AttackComponent>();
         moveComponent = this.GetComponent<BasicMovement>();
-        transformPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+
+        var playerObject = GameObject.Find("PlayerShip");
+        if(playerObject != null) player = playerObject.transform;
+
+        initDirection = transform.forward.normalized;
     }
 
-    //TODO: findPlayer once in start (save its transform)
+
     void Update()
-    {  
-    	if (transformPlayer != null) playerPosition = transformPlayer.position;
+    {
+        if (player == null || !IsInRange(player.position) || !IsInFront(player.position)) return;
     	
     	if (moveComponent != null)
         {
-            moveComponent.LookAt(playerPosition);
-            if (target != null) moveComponent.MoveTo(target.position); 
+            moveComponent.LookAt(player.position);
+            if (target != null) moveComponent.MoveTo(target.position);
+            else moveComponent.MoveTo(transform.position + initDirection*100f);
         }
 
         if (attackComponent != null)
         {
-            if (transform.position.z > playerPosition.z) {
-                if (Mathf.Abs(transform.position.z-playerPosition.z) <= distance) {
-                    attackComponent.BasicAttack();
-                }
-            }  
+            attackComponent.BasicAttack();
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    bool IsInRange(Vector3 position)
     {
-        //Debug.Log("Enemigo disparado");
-        //explota nave al cabo de ciertos disparos...
+        return Mathf.Abs(transform.position.z - position.z) <= distance;
+    }
+
+
+    bool IsInFront(Vector3 position)
+    {
+        return transform.position.z > position.z;
     }
 }
