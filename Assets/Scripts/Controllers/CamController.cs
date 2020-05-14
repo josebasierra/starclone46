@@ -35,7 +35,7 @@ public class CamController : MonoBehaviour
 
     void FindPlayer()
     {
-        var playerObject = GameObject.FindGameObjectWithTag("Player");
+        var playerObject = GameObject.Find("PlayerShip");
         if (playerObject != null)
             player = playerObject.transform;
     }
