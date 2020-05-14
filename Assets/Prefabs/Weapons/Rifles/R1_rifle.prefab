@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5370931344211939711
+--- !u!1001 &8953282130328051845
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -66,17 +66,22 @@ PrefabInstance:
         type: 3}
       propertyPath: prefabBullet
       value: 
-      objectReference: {fileID: 4072940345251887427, guid: 994fbb586f4261b4f8136d3f096173c9,
+      objectReference: {fileID: 467069641607788020, guid: c4eaf2383ded11947b61b6f6efcdf7db,
         type: 3}
     - target: {fileID: 2513055597907315855, guid: 2066e3424e1eedc47a852371d5f8bb7c,
         type: 3}
+      propertyPath: cooldown
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513055597907315855, guid: 2066e3424e1eedc47a852371d5f8bb7c,
+        type: 3}
       propertyPath: shotSpeed
-      value: 70
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315952, guid: 2066e3424e1eedc47a852371d5f8bb7c,
         type: 3}
       propertyPath: m_Name
-      value: P1_rifle
+      value: R1_rifle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2066e3424e1eedc47a852371d5f8bb7c, type: 3}
