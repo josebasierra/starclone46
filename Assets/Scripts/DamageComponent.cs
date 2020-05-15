@@ -12,7 +12,7 @@ public class DamageComponent : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //explosion effect, particles...
-        if(other.gameObject.tag != this.gameObject.tag)
+        if(!CompareTag(other.gameObject.tag))
             Destroy(this.gameObject);
     }
 }
