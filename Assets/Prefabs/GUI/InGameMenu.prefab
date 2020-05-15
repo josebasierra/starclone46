@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2970108068630559969}
         m_MethodName: CloseGame
         m_Mode: 1
         m_Arguments:
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2970108068630559969}
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -1957,7 +1957,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2970108068630559969}
         m_MethodName: TurnMusic
         m_Mode: 0
         m_Arguments:
@@ -2709,7 +2709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd32d8b7885ec3945b21c0b2b590662f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
 --- !u!1 &3441033423122106675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,7 +5340,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2970108068630559969}
         m_MethodName: GodMode
         m_Mode: 0
         m_Arguments:

@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 5649924293786805544}
   m_Layer: 0
   m_Name: Flagship1
-  m_TagString: Untagged
+  m_TagString: Static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5649924293786805551}
     m_Modifications:
+    - target: {fileID: -6282446989394771875, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -208,10 +213,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3877194713426912736, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
+    - target: {fileID: -3427186709278479132, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
+    - target: {fileID: -1481031950960724339, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
         type: 3}
       propertyPath: m_Name
       value: Cornerian Battleship
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008325448837891248, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301827151347503147, guid: 45ddd0dcc2ce1bc44a6872d90421d883,
+        type: 3}
+      propertyPath: m_TagString
+      value: Static
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ddd0dcc2ce1bc44a6872d90421d883, type: 3}

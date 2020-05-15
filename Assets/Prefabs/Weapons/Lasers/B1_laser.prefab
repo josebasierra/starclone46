@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: dps
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 7458558573074832802, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: energyCostPerSecond
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7458558573074832862, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
         type: 3}
       propertyPath: m_LocalPosition.x

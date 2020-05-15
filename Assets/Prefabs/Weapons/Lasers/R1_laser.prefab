@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4233779054276108327, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 045e1512a3fde1d469394d11f2e346df, type: 3}
+    - target: {fileID: 4233779054276108327, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233779054276108327, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: Priority
+      value: 97
+      objectReference: {fileID: 0}
     - target: {fileID: 7458558573074832800, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
         type: 3}
       propertyPath: m_Name
@@ -17,6 +32,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 10dd94f3502c29b4abaa08aa98afad67, type: 2}
+    - target: {fileID: 7458558573074832802, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
+        type: 3}
+      propertyPath: dps
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7458558573074832862, guid: 24cfa3ac19779db40b9ff97ad4f86d24,
         type: 3}
       propertyPath: m_LocalPosition.x

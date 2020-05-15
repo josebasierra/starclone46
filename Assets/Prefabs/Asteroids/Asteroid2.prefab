@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5271210619461711785}
   - component: {fileID: 5271210619461711784}
   - component: {fileID: 3535015340281331373}
+  - component: {fileID: 8058740343392091136}
   m_Layer: 0
   m_Name: Asteroid2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +80,19 @@ MonoBehaviour:
   healHealth: 10
   explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
     type: 3}
+--- !u!114 &8058740343392091136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271210619461711783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f53996c029b4fd4c95be53924fffaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!1 &7641128180515571270
 GameObject:
   m_ObjectHideFlags: 0

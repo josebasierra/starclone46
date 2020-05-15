@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 4566997928366114722}
   - component: {fileID: 281953006}
   - component: {fileID: 1086432209}
+  - component: {fileID: -524901559388424307}
   m_Layer: 0
   m_Name: Bolse
   m_TagString: Enemy
@@ -330,6 +331,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 20
+--- !u!114 &-524901559388424307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566997928366114749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f53996c029b4fd4c95be53924fffaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!1 &5868048554414804082
 GameObject:
   m_ObjectHideFlags: 0

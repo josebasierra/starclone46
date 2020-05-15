@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 268243772}
   m_TextComponent: {fileID: 1534176541}
   m_materialReferenceIndex: 1
@@ -1247,9 +1247,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game  designed  based  on  the original star   fox   64\n\nVJ   project 
-    directed  by \nAntonio  Chica\n\nGroup  12\n\nDeveloped  by \nJ oseba  Sierra
-    \xB7 A lex  Aguilera"
+  m_text: "Game  based  on  star  fox   64\n\nFIB   VJ   project \nQ2  2020\n\nDeveloped  
+    by \nJoseba  Sierra \xB7 A lex  Aguilera"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7da775be9dd9174b80179633b7c18c3, type: 2}
   m_sharedMaterial: {fileID: -8936837202766757481, guid: b7da775be9dd9174b80179633b7c18c3,
@@ -1295,7 +1294,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 127
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1319,12 +1318,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 666900205}
-    characterCount: 160
+    characterCount: 111
     spriteCount: 0
-    spaceCount: 47
-    wordCount: 25
+    spaceCount: 37
+    wordCount: 18
     linkCount: 0
-    lineCount: 10
+    lineCount: 7
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
@@ -3517,7 +3516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd32d8b7885ec3945b21c0b2b590662f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
 --- !u!1 &2054619295
 GameObject:
   m_ObjectHideFlags: 0

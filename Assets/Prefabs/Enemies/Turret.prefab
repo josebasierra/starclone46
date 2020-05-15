@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5241665976100103294}
   - component: {fileID: 5241665976100103295}
   - component: {fileID: 1521940819}
+  - component: {fileID: 5256132498861445530}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -124,6 +125,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 25
+--- !u!114 &5256132498861445530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241665976100103280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f53996c029b4fd4c95be53924fffaed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!1 &5241665976276112194
 GameObject:
   m_ObjectHideFlags: 0

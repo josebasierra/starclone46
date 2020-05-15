@@ -76,7 +76,24 @@ public class Health : MonoBehaviour
     //TODO: die if clash with Static tag
     private void OnCollisionEnter(Collision collision)
     {
-        if (godMode && collision.transform.CompareTag("Static")) StartCoroutine(ColliderDesactivation());
+        GameObject otherObject = collision.gameObject;
+
+        if (godMode && otherObject.CompareTag("Static")) StartCoroutine(ColliderDesactivation());
+        else if (CompareTag("Player"))
+        {
+            if (collision.transform.CompareTag("Static"))
+            {
+                TakeDamage(100f);
+            }
+            else if (collision.transform.CompareTag("Enemy"))
+            {
+                var collisionDamage = otherObject.GetComponent<CollisionDamage>();
+                if(collisionDamage != null) TakeDamage(collisionDamage.GetDamage());
+
+                var enemyHealth = otherObject.GetComponent<Health>();
+                if (enemyHealth != null) enemyHealth.TakeDamage(200f);
+            }
+        }
     }
 
 

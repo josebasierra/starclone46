@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056367487}
-  m_LocalRotation: {x: -0.018673865, y: 0.09335679, z: 0.0009681417, w: 0.9954571}
-  m_LocalPosition: {x: 1.821, y: 1.046, z: 1.71}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.86, y: 1.046, z: 1.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9169875720095344925}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -2.141, y: 10.717001, z: -0.089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1056367489
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -305,10 +305,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.39602706
+  m_Radius: 0.5
   m_Height: 3.03
   m_Direction: 2
-  m_Center: {x: 0.086027056, y: 0.35, z: 0.61}
+  m_Center: {x: -0.03, y: 0.2, z: 0.22}
 --- !u!65 &6469976918983530934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healHealth: 10
+  healHealth: 50
   explosion: {fileID: 2785763398555349762, guid: 36dd2d330b0227e43b54856eee1c27b3,
     type: 3}
 --- !u!114 &7886598512490049596
