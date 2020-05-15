@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: Priority
       value: 85
       objectReference: {fileID: 0}
+    - target: {fileID: -107173199843313966, guid: 2066e3424e1eedc47a852371d5f8bb7c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2513055597907315854, guid: 2066e3424e1eedc47a852371d5f8bb7c,
         type: 3}
       propertyPath: m_LocalPosition.x

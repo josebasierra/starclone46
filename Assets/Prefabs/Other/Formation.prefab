@@ -47,4 +47,4 @@ MonoBehaviour:
   distanceBetweenMembers: 6
   formationLayers: 6
   rotationSpeed: 45
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.5

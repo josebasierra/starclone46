@@ -1283,21 +1283,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: B1_laser
       objectReference: {fileID: 0}
-    - target: {fileID: 7418324711743956162, guid: dde151040f72efd4d891ce51ea027596,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418324711743956162, guid: dde151040f72efd4d891ce51ea027596,
-        type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418324711743956162, guid: dde151040f72efd4d891ce51ea027596,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde151040f72efd4d891ce51ea027596, type: 3}
 --- !u!1 &4174144456074849853 stripped

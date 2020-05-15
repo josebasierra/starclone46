@@ -189,7 +189,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: bigBrownAsteroid
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8014072398111712339, guid: 5d402ad5e65c8e44198341572906ec7f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5d402ad5e65c8e44198341572906ec7f, type: 3}
 --- !u!4 &5983925453976995706 stripped
 Transform:
