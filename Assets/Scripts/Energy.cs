@@ -28,7 +28,7 @@ public class Energy : MonoBehaviour
     }
 
     public void Recharge() {
-    	currentEnergy += rechargeEnergy;
+    	currentEnergy = Mathf.Min(currentEnergy + rechargeEnergy, maxEnergy);
     }
 
 

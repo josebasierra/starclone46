@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageComponent : MonoBehaviour
+public class BulletDamage : MonoBehaviour
 {
     public float damage = 1f;
+    bool damageApplied = false;
 
-    public float GetDamage() => damage;
+    public float GetDamage() {
+        if (!damageApplied)
+        {
+            damageApplied = true;
+            return damage;
+        }
+        else return 0f;
+    }
 
 
     private void OnTriggerEnter(Collider other)

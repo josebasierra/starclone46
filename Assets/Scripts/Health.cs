@@ -47,7 +47,7 @@ public class Health : MonoBehaviour
 
     public void Heal()
     {
-        currentHealth += healHealth;
+        currentHealth = Mathf.Min(currentHealth + healHealth, maxHealth);
     }
 
     public float GetCurrentHealth() => currentHealth;
@@ -64,7 +64,7 @@ public class Health : MonoBehaviour
     // check for bullet impacts (bullet = object with damage component)
     private void OnTriggerEnter(Collider other)
     {
-        var damageComponent = other.gameObject.GetComponent<DamageComponent>();
+        var damageComponent = other.gameObject.GetComponent<BulletDamage>();
         if (damageComponent != null && !this.CompareTag(other.tag) && !bulletImmunity)
         {
             TakeDamage(damageComponent.GetDamage());
