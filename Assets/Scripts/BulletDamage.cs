@@ -5,16 +5,14 @@ using UnityEngine;
 public class BulletDamage : MonoBehaviour
 {
     public float damage = 1f;
-    bool damageApplied = false;
+    bool hasDamaged = false;
 
-    public float GetDamage() {
-        if (!damageApplied)
-        {
-            damageApplied = true;
-            return damage;
-        }
-        else return 0f;
-    }
+
+    public float GetDamage() => damage;
+
+    public bool SetHasDamaged(bool value) => hasDamaged = value;
+
+    public bool GetHasDamaged() => hasDamaged;
 
 
     private void OnTriggerEnter(Collider other)

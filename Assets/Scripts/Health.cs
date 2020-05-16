@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     float currentHealth;
     bool bulletImmunity;
     bool godMode;
+    bool isDead;
 
     public GameObject explosion;
 
@@ -21,6 +22,7 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
         bulletImmunity = false;
         godMode = false;
+        isDead = false;
     }
 
     public void TakeDamage(float damage)
@@ -30,11 +32,10 @@ public class Health : MonoBehaviour
 
         currentHealth -= damage;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
+            isDead = true;
             OnDeath?.Invoke();
-            
-            //crear explosion y sonido con efecto aparte
             
             if (explosion != null) {
                 GameObject aux = Instantiate(explosion);
@@ -65,15 +66,14 @@ public class Health : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var damageComponent = other.gameObject.GetComponent<BulletDamage>();
-        if (damageComponent != null && !this.CompareTag(other.tag) && !bulletImmunity)
+        if (damageComponent != null && !this.CompareTag(other.tag) && !bulletImmunity && !damageComponent.GetHasDamaged())
         {
+            damageComponent.SetHasDamaged(true);
             TakeDamage(damageComponent.GetDamage());
         }
     }
 
 
-    //TODO: on asteroid clash sound/effect
-    //TODO: die if clash with Static tag
     private void OnCollisionEnter(Collision collision)
     {
         GameObject otherObject = collision.gameObject;

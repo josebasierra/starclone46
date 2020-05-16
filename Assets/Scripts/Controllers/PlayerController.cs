@@ -38,7 +38,9 @@ public class PlayerController : MonoBehaviour
         timeSinceLastTap_D = doubleTapTime;
 
         if (health != null) health.OnDeath += OnDeath;
-        gameMenuManager = GameObject.FindGameObjectWithTag("Manager")?.GetComponent<GameMenuManager>();
+
+        GameObject managerObject = GameObject.FindGameObjectWithTag("Manager");
+        if (managerObject != null) gameMenuManager = managerObject.GetComponent<GameMenuManager>();
     }
 
 
