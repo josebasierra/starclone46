@@ -57,7 +57,7 @@ public class Formation : MonoBehaviour
     }
 
 
-    void Start()
+    private void Start()
     {
         memberToFormationTarget = new Dictionary<Transform, Transform>();
         targetOccupied = new Dictionary<Transform, bool>();
@@ -68,7 +68,7 @@ public class Formation : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
         if (player == null) return;
         transform.position = new Vector3(0, 0, player.position.z + distanceToPlayer);
@@ -119,10 +119,10 @@ public class Formation : MonoBehaviour
 
     private void CreateFormationTransforms()
     {
-        Transform childTransformInit = new GameObject().transform;
-        childTransformInit.parent = transform;
-        childTransformInit.localPosition = new Vector3(0, 0, 0);
-        targetOccupied.Add(childTransformInit, false);
+        //Transform childTransformInit = new GameObject().transform;
+        //childTransformInit.parent = transform;
+        //childTransformInit.localPosition = new Vector3(0, 0, 0);
+        //targetOccupied.Add(childTransformInit, false);
 
         for (int i = 1; i <= formationLayers; i++)
         {
