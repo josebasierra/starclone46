@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip supplySound;
     public AudioClip winSound;
 
-
     GameMenuManager gameMenuManager;
+
     void Start()
     {
         moveComponent = this.GetComponent<PlayerMovement>();
@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("HealthSupply")) {
             health.Heal();
@@ -171,7 +172,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         if (health != null) health.OnDeath -= OnDeath;
     }

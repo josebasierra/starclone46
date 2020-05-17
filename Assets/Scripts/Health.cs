@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
 
     public GameObject explosion;
 
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -25,9 +26,9 @@ public class Health : MonoBehaviour
         isDead = false;
     }
 
+
     public void TakeDamage(float damage)
     {
-
         if (godMode) return;
 
         currentHealth -= damage;
@@ -46,6 +47,7 @@ public class Health : MonoBehaviour
         }
     }
 
+
     public void Heal()
     {
         currentHealth = Mathf.Min(currentHealth + healHealth, maxHealth);
@@ -55,7 +57,7 @@ public class Health : MonoBehaviour
 
     public float GetMaxHealth() => maxHealth;
 
-    public bool GetBulletImmunity(bool value) => bulletImmunity;
+    public bool GetBulletImmunity() => bulletImmunity;
 
     public void SetBulletImmunity(bool value) => bulletImmunity = value;
 

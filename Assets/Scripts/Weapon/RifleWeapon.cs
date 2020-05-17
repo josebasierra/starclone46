@@ -44,7 +44,7 @@ public class RifleWeapon : MonoBehaviour, IWeapon
         Vector3 shotDirection = (endPoint.position - releasePoint.position).normalized;
         bulletTransform.GetComponent<Rigidbody>().velocity = shotDirection * shotSpeed;
 
-        Destroy(bulletTransform.gameObject, 6);    //destroy bullet after N seconds
+        Destroy(bulletTransform.gameObject, 2f);    //destroy bullet after N seconds
 
 
         if (source != null)

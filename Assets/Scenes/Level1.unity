@@ -32325,6 +32325,11 @@ PrefabInstance:
       propertyPath: boostFuelPerSecond
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1154539158168913313, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 91ed57d60ee1e6646810bddb0376ea08, type: 3}
     - target: {fileID: 1608444708971388150, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32395,6 +32400,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1990216819440399466, guid: b1fa70e3ad67dc24886c3b637e5d0798,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 91ed57d60ee1e6646810bddb0376ea08, type: 3}
     - target: {fileID: 6779893915376304141, guid: b1fa70e3ad67dc24886c3b637e5d0798,
         type: 3}
       propertyPath: m_Name
