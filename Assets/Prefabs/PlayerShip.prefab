@@ -810,7 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 1274310812}
   supplySound: {fileID: 8300000, guid: 08ee2775df48b9b4bba98cdd3e7bcab4, type: 3}
-  winSound: {fileID: 8300000, guid: 96127a3c9c282854e8d2e1f5ab225a92, type: 3}
+  winSound: {fileID: 8300000, guid: b549b13855294314e9b6bbf3f4210283, type: 3}
 --- !u!114 &627824234621983618
 MonoBehaviour:
   m_ObjectHideFlags: 0
