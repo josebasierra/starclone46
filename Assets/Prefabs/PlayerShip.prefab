@@ -811,8 +811,6 @@ MonoBehaviour:
   audio: {fileID: 1274310812}
   supplySound: {fileID: 8300000, guid: 08ee2775df48b9b4bba98cdd3e7bcab4, type: 3}
   winSound: {fileID: 0}
-  overheatSound: {fileID: 8300000, guid: ca861be82fb1e5c4d93e80715e04fc8d, type: 3}
-  stopOverheatSound: {fileID: 8300000, guid: ab683bd15fc05b84e887e77489bc86d0, type: 3}
 --- !u!114 &627824234621983618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,7 +1228,7 @@ PrefabInstance:
     - target: {fileID: 4301033415451089211, guid: dde151040f72efd4d891ce51ea027596,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4301033415451089211, guid: dde151040f72efd4d891ce51ea027596,
         type: 3}
