@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Sounds")]
+    public AudioSource audio;
+    public AudioClip supplySound;
+    public AudioClip winSound;
+
     PlayerMovement moveComponent;
     Crosshair aimComponent;
     AttackComponent attackComponent;
@@ -16,12 +21,9 @@ public class PlayerController : MonoBehaviour
     float timeSinceLastTap_A;
     float timeSinceLastTap_D;
 
-    [Header("Sounds")]
-    public AudioSource audio;
-    public AudioClip supplySound;
-    public AudioClip winSound;
 
     GameMenuManager gameMenuManager;
+
 
     void Start()
     {
@@ -175,5 +177,6 @@ public class PlayerController : MonoBehaviour
     private void OnDestroy()
     {
         if (health != null) health.OnDeath -= OnDeath;
+
     }
 }

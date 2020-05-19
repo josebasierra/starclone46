@@ -1,25 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Energy : MonoBehaviour
 {
     public float maxEnergy;
     public float energyPerSecond;
     public float rechargeEnergy = 20f;
-    [Range(0,1)] public float cooldownThreshold;
+    [Range(0,1)] public float overheatingStopThreshold;
 
+    public AudioClip overheatSound;
+    public AudioClip stopOverheatSound;
+
+    AudioSource audioSource;
     float currentEnergy;
-    bool onCooldown;
+    bool isOverheated;
 
 
     public float GetMaxEnergy() => maxEnergy;
+
     public float GetCurrentEnergy() => currentEnergy;
-    public bool isOnCooldown() => onCooldown;
+
+    public bool IsOverheated() => isOverheated;
+
 
     public bool Consume(float value)
     {
-        if (onCooldown) return false;
+        if (isOverheated) return false;
         else
         {
             currentEnergy -= value;
@@ -27,13 +35,15 @@ public class Energy : MonoBehaviour
         }
     }
 
-    public void Recharge() {
+    public void Recharge()
+    {
     	currentEnergy = Mathf.Min(currentEnergy + rechargeEnergy, maxEnergy);
     }
 
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentEnergy = maxEnergy;
     }
 
@@ -43,10 +53,22 @@ public class Energy : MonoBehaviour
         currentEnergy += energyPerSecond * Time.deltaTime;
         currentEnergy = Mathf.Min(currentEnergy, maxEnergy);
 
-        if (currentEnergy >= cooldownThreshold * maxEnergy) { onCooldown = false; }
-        else if (currentEnergy <= 0)
+        if (currentEnergy >= overheatingStopThreshold * maxEnergy && isOverheated) 
+        { 
+            isOverheated = false;
+            if (audioSource != null && overheatSound != null)
+            {
+                audioSource.PlayOneShot(stopOverheatSound);
+            }
+            
+        }
+        else if (currentEnergy <= 0 && !isOverheated)
         {
-            onCooldown = true;
+            isOverheated = true;
+            if (audioSource != null && stopOverheatSound != null)
+            {
+                audioSource.PlayOneShot(overheatSound);
+            }
             currentEnergy = 0f;
         }
     }

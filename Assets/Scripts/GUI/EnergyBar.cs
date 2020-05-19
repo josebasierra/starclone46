@@ -24,7 +24,7 @@ public class EnergyBar : MonoBehaviour
 	void Update()
 	{
 		slider.value = energy.GetCurrentEnergy() / energy.GetMaxEnergy();
-		image.color = energy.isOnCooldown() ? Color.red : originalColor;
+		image.color = energy.IsOverheated() ? Color.red : originalColor;
 	}
 }
 

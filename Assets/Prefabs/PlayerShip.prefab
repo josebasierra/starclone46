@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2316235861628386083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.83, y: -0.99057394, z: -3.0400002}
+  m_LocalPosition: {x: 1.69, y: -0.734, z: -3.0400002}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2392715650667502998}
@@ -205,7 +205,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2836544
+        value: 0.28365463
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -226,8 +226,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.0046279924, g: 0.6916126, b: 0.972549, a: 0.039215688}
-      key1: {r: 0.015653478, g: 0.6992763, b: 0.97197473, a: 0}
+      key0: {r: 0.4717871, g: 0.5471995, b: 0.5849056, a: 0.05490196}
+      key1: {r: 0.42114633, g: 0.9811321, b: 0.9508547, a: 0}
       key2: {r: 0.42114633, g: 0.9811321, b: 0.9508547, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -235,7 +235,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 1735
+      ctime1: 65535
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -251,7 +251,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 3
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 2
     numCapVertices: 2
@@ -360,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3294003342146668843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8, y: -0.99057394, z: -3.04}
+  m_LocalPosition: {x: -1.728, y: -0.734, z: -3.04}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 2392715650667502998}
@@ -415,7 +415,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2836544
+        value: 0.28365463
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -436,8 +436,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.0046279924, g: 0.6916126, b: 0.972549, a: 0.039215688}
-      key1: {r: 0.015653478, g: 0.6992763, b: 0.97197473, a: 0}
+      key0: {r: 0.4717871, g: 0.5471995, b: 0.5849056, a: 0.05490196}
+      key1: {r: 0.42114633, g: 0.9811321, b: 0.9508547, a: 0}
       key2: {r: 0.42114633, g: 0.9811321, b: 0.9508547, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -445,7 +445,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 1735
+      ctime1: 65535
       ctime2: 65535
       ctime3: 0
       ctime4: 0
@@ -461,7 +461,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 3
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 2
     numCapVertices: 2
@@ -810,7 +810,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 1274310812}
   supplySound: {fileID: 8300000, guid: 08ee2775df48b9b4bba98cdd3e7bcab4, type: 3}
-  winSound: {fileID: 8300000, guid: b549b13855294314e9b6bbf3f4210283, type: 3}
+  winSound: {fileID: 0}
+  overheatSound: {fileID: 8300000, guid: ca861be82fb1e5c4d93e80715e04fc8d, type: 3}
+  stopOverheatSound: {fileID: 8300000, guid: ab683bd15fc05b84e887e77489bc86d0, type: 3}
 --- !u!114 &627824234621983618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,7 +829,7 @@ MonoBehaviour:
   lateralSpeed: 15
   rotationAngle: 35
   rotationSpeed: 140
-  positionLimits: {x: 10, y: 6}
+  positionLimits: {x: 10, y: 5.5}
   boostSpeedMultiplier: 2
   boostEnergyPerSecond: 20
   slowForwardMultiplier: 0.5
@@ -902,7 +904,9 @@ MonoBehaviour:
   maxEnergy: 100
   energyPerSecond: 10
   rechargeEnergy: 100
-  cooldownThreshold: 0.4
+  overheatingStopThreshold: 0.5
+  overheatSound: {fileID: 8300000, guid: ab683bd15fc05b84e887e77489bc86d0, type: 3}
+  stopOverheatSound: {fileID: 8300000, guid: ca861be82fb1e5c4d93e80715e04fc8d, type: 3}
 --- !u!82 &1274310812
 AudioSource:
   m_ObjectHideFlags: 0
@@ -915,7 +919,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1011,7 +1015,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
